@@ -8,12 +8,11 @@ import com.oasystem.entity.User;
 public class UserDaoImpl extends BaseDao implements UserDao {
 
 	public void save(User user) {
-		org.hibernate.Session sess=getSession();
-
-		//org.hibernate.Transaction tx=sess.beginTransaction();
-		sess.save(user);
-	//tx.commit();
+		
 		System.out.println(user);
+		System.out.println("sunxs:test   pass="+getSession());
+		getSession().save(user);
+	
 
 	}
 

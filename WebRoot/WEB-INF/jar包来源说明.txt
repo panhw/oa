@@ -1,33 +1,54 @@
-antlr-2.7.7.jar    /struts
-aopalliance.jar
+2013/2/25 sunxs引入
+以下jar包来自：http://www.mysql.com/downloads/connector/j/
+版本：与数据库版本一致  
+mysql-connector-java-5.1.17-bin.jar
+
+2013/2/25 sunxs引入
+一下jar包来自http://www.eclipse.org/aspectj/downloads.php
+版本：与jdk版本一致，如jdk1.7则选择Aspect 1.7+  （推荐jdk1.7  aspect1.7）
 aspectjrt.jar
 aspectjweaver.jar
-commons-fileupload-1.2.1.jar
-commons-logging-1.0.4.jar
-commons-logging-1.1.1.jar
+
+2013/2/25 sunxs引入
+一下jar包来自http://sourceforge.net/projects/hibernate/files/hibernate4/
+版本：hibernate4.1.9.Final 
 dom4j-1.6.1.jar
-freemarker-2.3.15.jar
 hibernate-commons-annotations-4.0.1.Final.jar
-hibernate-core-4.1.7.Final.jar
+hibernate-core-4.1.9.Final.jar
 hibernate-jpa-2.0-api-1.0.1.Final.jar
-javassist-3.15.0-GA.jar
 jboss-logging-3.1.0.GA.jar
 jboss-transaction-api_1.1_spec-1.0.0.Final.jar
-mysql-connector-java-5.0.8-bin.jar
-ognl-2.7.3.jar
-org.springframework.aop-3.1.3.RELEASE.jar
-org.springframework.asm-3.1.3.RELEASE.jar
-org.springframework.aspects-3.1.3.RELEASE.jar
-org.springframework.beans-3.1.3.RELEASE.jar
-org.springframework.context-3.1.3.RELEASE.jar
-org.springframework.context.support-3.1.3.RELEASE.jar
-org.springframework.core-3.1.3.RELEASE.jar
-org.springframework.expression-3.1.3.RELEASE.jar
-org.springframework.jdbc-3.1.3.RELEASE.jar
-org.springframework.orm-3.1.3.RELEASE.jar
-org.springframework.transaction-3.1.3.RELEASE.jar
-org.springframework.web-3.1.3.RELEASE.jar
-org.springframework.web.struts-3.1.3.RELEASE.jar
-struts2-core-2.1.8.1.jar
-struts2-spring-plugin-2.1.8.1.jar
-xwork-core-2.1.6.jar
+
+2013/2/25 sunxs引入
+以下jar包来自http://struts.apache.org/download.cgi#struts238
+版本：struts2.3.8
+antlr-2.7.2.jar
+aopalliance-1.0.jar
+asm-3.3.jar
+commons-fileupload-1.2.2.jar
+commons-io-2.0.1.jar
+commons-lang3-3.1.jar
+commons-logging-1.1.1.jar
+freemarker-2.3.19.jar
+javassist-3.11.0.GA.jar
+ognl-3.0.6.jar
+struts2-core-2.3.8.jar
+struts2-spring-plugin-2.3.8.jar
+xwork-core-2.3.8.jar
+
+2013/2/25 sunxs引入
+以下jar包来自http://www.springsource.org/download/community
+版本：spring3.2.0release
+spring-aop-3.2.0.RELEASE.jar
+spring-aspects-3.2.0.RELEASE.jar
+spring-beans-3.2.0.RELEASE.jar
+spring-context-3.2.0.RELEASE.jar
+spring-context-support-3.2.0.RELEASE.jar
+spring-core-3.2.0.RELEASE.jar
+spring-expression-3.2.0.RELEASE.jar
+spring-jdbc-3.2.0.RELEASE.jar
+spring-orm-3.2.0.RELEASE.jar
+spring-struts-3.2.0.RELEASE.jar
+spring-test-3.2.0.RELEASE.jar
+spring-tx-3.2.0.RELEASE.jar
+spring-web-3.2.0.RELEASE.jar
