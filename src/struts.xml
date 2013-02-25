@@ -13,6 +13,7 @@
     <package name="ssh" extends="struts-default">
     	<action name="TestAction" class="testAction">
     		<result name="success">index.jsp</result>
+    		<result name="error">userInfo.jsp</result>
     	</action>
     </package>
     

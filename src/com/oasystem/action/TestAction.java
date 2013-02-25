@@ -8,7 +8,7 @@ public class TestAction {
 	private UserService userService;
 	private User user = new User();
 	private String msg;
-	
+	private String idInfo;
 	
 	
 	public static final String SUCCESS = "success";
@@ -22,9 +22,7 @@ public class TestAction {
 	
 	
 	public String execute() {
-		System.out.println("++++++++++++");
-		//user.setId("123");
-		System.out.println(user);
+		
 		userService.register(user);
 		
 		msg=user.toString();
@@ -32,6 +30,11 @@ public class TestAction {
 	}
 
 
+	public String getInfo() {
+		
+		userService.getInfo(idInfo);
+		return "error";
+	}
 
 	public User getUser() {
 		return user;
@@ -54,6 +57,19 @@ public class TestAction {
 	public void setMsg(String msg) {
 		this.msg = msg;
 	}
+
+
+
+	public String getIdInfo() {
+		return idInfo;
+	}
+
+
+
+	public void setIdInfo(String idInfo) {
+		this.idInfo = idInfo;
+	}
+	
 	
 	
 	

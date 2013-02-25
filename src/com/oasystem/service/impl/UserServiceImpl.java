@@ -16,5 +16,9 @@ public class UserServiceImpl implements UserService {
 		
 		userDao.save(user);
 	}
+	public void getInfo(String str) {
+		userDao.get(str);
+		
+	}
 
 }

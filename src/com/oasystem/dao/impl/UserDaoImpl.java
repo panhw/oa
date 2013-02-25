@@ -22,9 +22,9 @@ public class UserDaoImpl extends BaseDao implements UserDao {
 
 	}
 
-	public User get(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+	public User get(String id) {
+		User user = (User) getSession().get(User.class, id);
+		return user;
 	}
 
 	public List<User> list() {

@@ -10,7 +10,7 @@ public interface UserDao {
 	
 	public void update(User user);
 	
-	public User get(Integer id);
+	public User get(String id);
 	
 	public List<User> list();
 }
