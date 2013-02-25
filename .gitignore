@@ -1,11 +1,7 @@
 #############
 ## MyEclipse
 #############
-.project
-.mymetadata
-.myeclipse/
-.settings/
-classes/
+
 
 #############
 ## Java
