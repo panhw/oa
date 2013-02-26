@@ -1,17 +1,22 @@
-2013/2/25 sunxsÒıÈë
-ÒÔÏÂjar°üÀ´×Ô£ºhttp://www.mysql.com/downloads/connector/j/
-°æ±¾£ºÓëÊı¾İ¿â°æ±¾Ò»ÖÂ  
+ï»¿jaråŒ…å¼•å…¥è¯´æ˜ï¼š
+ç”±äºjaråŒ…ç›¸å¯¹è¾ƒå¤§ï¼Œå¹¶ä¸”å˜åŠ¨å°‘ï¼ŒjaråŒ…ä¸å‚ä¸githubåŒæ­¥ï¼Œæ­¤æ–‡ä»¶è¯´æ˜jaråŒ…çš„å¼•å…¥æ—¶é—´ã€å¼•å…¥äººã€æ¥æºã€ç‰ˆæœ¬ã€ç”¨é€”ã€‚
+å¼•å…¥æ–°jaråŒ…æ—¶éœ€è¦1.è¿è¡Œlist_jars.batå°†æ–°jaråŒ…listå†™å…¥jars.txtï¼Œå¹¶åœ¨è¯´æ˜æ–‡ä»¶å†…å‚ç…§æ ¼å¼æ³¨æ˜å¼•å…¥ä¿¡æ¯
+åˆ é™¤jaråŒ…ä¹Ÿè¦åœ¨è¯¥æ–‡ä»¶å†…è¯´æ˜åˆ é™¤çš„jaråŒ…å’ŒåŸå› 
+
+2013/2/25 sunxså¼•å…¥
+ä»¥ä¸‹jaråŒ…æ¥è‡ªï¼šhttp://www.mysql.com/downloads/connector/j/
+ç‰ˆæœ¬ï¼šä¸æ•°æ®åº“ç‰ˆæœ¬ä¸€è‡´  
 mysql-connector-java-5.1.17-bin.jar
 
-2013/2/25 sunxsÒıÈë
-Ò»ÏÂjar°üÀ´×Ôhttp://www.eclipse.org/aspectj/downloads.php
-°æ±¾£ºÓëjdk°æ±¾Ò»ÖÂ£¬Èçjdk1.7ÔòÑ¡ÔñAspect 1.7+  £¨ÍÆ¼öjdk1.7  aspect1.7£©
+2013/2/25 sunxså¼•å…¥
+ä¸€ä¸‹jaråŒ…æ¥è‡ªhttp://www.eclipse.org/aspectj/downloads.php
+ç‰ˆæœ¬ï¼šä¸jdkç‰ˆæœ¬ä¸€è‡´ï¼Œå¦‚jdk1.7åˆ™é€‰æ‹©Aspect 1.7+  ï¼ˆæ¨èjdk1.7  aspect1.7ï¼‰
 aspectjrt.jar
 aspectjweaver.jar
 
-2013/2/25 sunxsÒıÈë
-Ò»ÏÂjar°üÀ´×Ôhttp://sourceforge.net/projects/hibernate/files/hibernate4/
-°æ±¾£ºhibernate4.1.9.Final 
+2013/2/25 sunxså¼•å…¥
+ä¸€ä¸‹jaråŒ…æ¥è‡ªhttp://sourceforge.net/projects/hibernate/files/hibernate4/
+ç‰ˆæœ¬ï¼šhibernate4.1.9.Final 
 dom4j-1.6.1.jar
 hibernate-commons-annotations-4.0.1.Final.jar
 hibernate-core-4.1.9.Final.jar
@@ -19,9 +24,9 @@ hibernate-jpa-2.0-api-1.0.1.Final.jar
 jboss-logging-3.1.0.GA.jar
 jboss-transaction-api_1.1_spec-1.0.0.Final.jar
 
-2013/2/25 sunxsÒıÈë
-ÒÔÏÂjar°üÀ´×Ôhttp://struts.apache.org/download.cgi#struts238
-°æ±¾£ºstruts2.3.8
+2013/2/25 sunxså¼•å…¥
+ä»¥ä¸‹jaråŒ…æ¥è‡ªhttp://struts.apache.org/download.cgi#struts238
+ç‰ˆæœ¬ï¼šstruts2.3.8
 antlr-2.7.2.jar
 aopalliance-1.0.jar
 asm-3.3.jar
@@ -36,9 +41,9 @@ struts2-core-2.3.8.jar
 struts2-spring-plugin-2.3.8.jar
 xwork-core-2.3.8.jar
 
-2013/2/25 sunxsÒıÈë
-ÒÔÏÂjar°üÀ´×Ôhttp://www.springsource.org/download/community
-°æ±¾£ºspring3.2.0release
+2013/2/25 sunxså¼•å…¥
+ä»¥ä¸‹jaråŒ…æ¥è‡ªhttp://www.springsource.org/download/community
+ç‰ˆæœ¬ï¼šspring3.2.0release
 spring-aop-3.2.0.RELEASE.jar
 spring-aspects-3.2.0.RELEASE.jar
 spring-beans-3.2.0.RELEASE.jar
