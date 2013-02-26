@@ -26,6 +26,8 @@
 			<props>
 				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
 				<prop key="show_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<prop key="current_session_context_class">thread</prop>
 				
 			</props>
 		</property>
@@ -33,7 +35,7 @@
 		<!-- 加载hibernate的映射文件*.hbm.xml -->
 		<property name="mappingDirectoryLocations">
             <list>
-                <value>classpath:com/oasystem/entity/</value>
+                <value>classpath:com/oa/personal/entity/</value>
             </list>
         </property>
 
@@ -53,7 +55,7 @@
 	
 	<!-- 将事务配置应用到对应的PointCut上 -->
 	<aop:config>
-		<aop:pointcut id="transactionPointCut" expression="execution(* com.oasystem.service.*.*(..))"/>
+		<aop:pointcut id="transactionPointCut" expression="execution(* com.oa.*.service.*.*(..))"/>
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="transactionPointCut" />
 	</aop:config>
 </beans>

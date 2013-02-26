@@ -10,7 +10,7 @@
 				http://www.springframework.org/schema/tx
 				http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
 	>
-	<bean id="userService" class="com.oasystem.service.impl.UserServiceImpl">
+	<bean id="userService" class="com.oa.personal.service.impl.UserServiceImpl">
 		<property name="userDao" ref="userDao" />
 	</bean>
 

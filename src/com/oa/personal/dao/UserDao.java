@@ -1,8 +1,8 @@
-package com.oasystem.dao;
+package com.oa.personal.dao;
 
 import java.util.List;
 
-import com.oasystem.entity.User;
+import com.oa.personal.entity.User;
 
 public interface UserDao {
 

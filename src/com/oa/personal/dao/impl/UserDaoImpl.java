@@ -1,14 +1,17 @@
-package com.oasystem.dao.impl;
+package com.oa.personal.dao.impl;
 
 import java.util.List;
 
-import com.oasystem.dao.UserDao;
-import com.oasystem.entity.User;
+import com.oa.personal.dao.UserDao;
+import com.oa.personal.entity.User;
 
 public class UserDaoImpl extends BaseDao implements UserDao {
 
 	public void save(User user) {
-		
+		if (null==getSession()){
+			System.out.println("no rejection");
+			return;
+		}
 		System.out.println(user);
 		System.out.println("sunxs:test   pass="+getSession());
 		getSession().save(user);

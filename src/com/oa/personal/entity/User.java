@@ -1,4 +1,4 @@
-package com.oasystem.entity;
+package com.oa.personal.entity;
 
 
 public class User {

@@ -1,6 +1,6 @@
-package com.oasystem.service;
+package com.oa.personal.service;
 
-import com.oasystem.entity.User;
+import com.oa.personal.entity.User;
 
 public interface UserService {
 

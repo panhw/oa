@@ -1,8 +1,8 @@
-package com.oasystem.service.impl;
+package com.oa.personal.service.impl;
 
-import com.oasystem.dao.UserDao;
-import com.oasystem.entity.User;
-import com.oasystem.service.UserService;
+import com.oa.personal.dao.UserDao;
+import com.oa.personal.entity.User;
+import com.oa.personal.service.UserService;
 
 public class UserServiceImpl implements UserService {
 

@@ -10,7 +10,7 @@
 				http://www.springframework.org/schema/tx
 				http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
 	>
-	<bean id="testAction" class="com.oasystem.action.TestAction">
+	<bean id="testAction" class="com.oa.personal.action.TestAction">
 		<property name="userService" ref="userService" />
 	</bean>
 	

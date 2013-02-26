@@ -1,7 +1,7 @@
-package com.oasystem.action;
+package com.oa.test.action;
 
-import com.oasystem.entity.User;
-import com.oasystem.service.UserService;
+import com.oa.personal.entity.User;
+import com.oa.personal.service.UserService;
 
 public class TestAction {
 

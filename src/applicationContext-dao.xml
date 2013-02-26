@@ -11,7 +11,7 @@
 				http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
 	>
 	<!-- 每一个DaoImpl都必须继承BaseDao -->
-	<bean id="userDao" class="com.oasystem.dao.impl.UserDaoImpl">
-		<property name="sessionFactory" ref="sessionFactory" />
+	<bean id="userDao" class="com.oa.personal.dao.impl.UserDaoImpl">
+		<property name="sessionFactory"  ref="sessionFactory" />
 	</bean>
 </beans>

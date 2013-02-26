@@ -1,4 +1,4 @@
-package com.oasystem.dao.impl;
+package com.oa.personal.dao.impl;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
