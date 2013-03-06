@@ -10,8 +10,8 @@
 				http://www.springframework.org/schema/tx
 				http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
 	>
-	<bean id="userService" class="com.oa.personal.service.impl.UserServiceImpl">
-		<property name="userDao" ref="userDao" />
+	<bean id="employeeService" class="com.oa.personal.service.impl.EmployeeServiceImpl">
+		<property name="employeeDAO" ref="employeeDAO" />
 	</bean>
 
 </beans>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.oa.personal.entity.Group"  table="t_group">
+		<id name="id" column="id" length="32">
+			<generator class="uuid" />
+		</id>
+		<property name="name" length="20" />
+		
+	</class>
+</hibernate-mapping>

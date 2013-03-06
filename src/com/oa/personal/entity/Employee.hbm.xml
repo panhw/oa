@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.oa.personal.entity.Employee" table="t_employee">
+		<id name="id" column="id" length="32">
+			<generator class="uuid" />
+		</id>
+		
+		<property name="name" length="20" />
+		<property name="password" length="50" />
+		<property name="realName" length="50"></property>
+		<property name="sex" length="10"></property>
+		<property name="phone" length="20"></property>
+		<property name="email" length="50"></property>
+		<property name="imageUrl" length="50"></property>
+		<property name="visible" length="10"></property>
+		<property name="birthday" length="10"></property>
+	</class>
+</hibernate-mapping>

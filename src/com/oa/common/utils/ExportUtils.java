@@ -1,4 +1,4 @@
-package com.oa.common;
+package com.oa.common.utils;
 
 import org.hibernate.cfg.Configuration;
 import org.hibernate.tool.hbm2ddl.SchemaExport;

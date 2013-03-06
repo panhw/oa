@@ -57,3 +57,10 @@ spring-struts-3.2.0.RELEASE.jar
 spring-test-3.2.0.RELEASE.jar
 spring-tx-3.2.0.RELEASE.jar
 spring-web-3.2.0.RELEASE.jar
+
+2013/3/7 sunxs引入
+以下jar包来自http://www.java2s.com/Code/Jar/j/Downloadjspapijar.htm
+http://www.java2s.com/Code/Jar/s/Downloadservletapijar.htm
+版本：第一个。。。
+jsp-api.jar
+servlet-api.jar
