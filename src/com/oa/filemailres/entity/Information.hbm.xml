@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.oa.filemailres.entity.Information" table="t_information">
+		<id name="id" column="id" length="32">
+			<generator class="uuid" />
+		</id>
+		
+		<many-to-one name="empSend" cascade="all" not-null="true" class="com.oa.personal.entity.Employee"  column="send _id"/>
+		<many-to-one name="empReceiver" cascade="all"  class="com.oa.personal.entity.Employee"  column="receiver_id"/>
+		<property name="password" />
+		<property name="info" />
+		<property name="group" />
+		<property name="date" />
+		<property name="status" />
+		<property name="state" />
+		<property name="undifined" />
+		
+	</class>
+</hibernate-mapping>

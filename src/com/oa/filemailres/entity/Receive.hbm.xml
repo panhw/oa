@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.oa.filemailres.entity.Receive" table="t_receive">
+		<id name="id" column="id" length="32">
+			<generator class="uuid" />
+		</id>
+		
+		<many-to-one name="meeting" cascade="all" not-null="true" class="com.oa.personal.entity.Meeting"  column="meeting _id"/>
+		<many-to-one name="employee" cascade="all" not-null="true"  class="com.oa.personal.entity.Employee"  column="emp_id"/>
+	</class>
+</hibernate-mapping>
