@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    
+    <!-- class为spring中*action。xml名字 -->
+    <package name="information" extends="struts-default" >
+    	
+    	<action name="bfrmainInfor" class="informationAction" method="inite">
+    		<result name="success">/pages/email/main.jsp</result>
+    	</action>
+    	<action name="bfrleftInfor" class="informationAction" method="inite">
+    		<result name="success">/pages/email/left.jsp</result>
+    	</action>
+    	<action name="email" class="informationAction">
+    		<!-- 模拟登陆 -->
+    		<result name="login">/pages/email/email.jsp</result>
+    		<result name="allNoRead">/pages/email/shownoreadlist.jsp</result>
+    		<result name="save" type="redirectAction">/bfrmainInfor</result>
+    		<result name="sender" type="redirectAction">/bfrmainInfor</result>	
+    	</action>
+    	
+    	
+   	  	</package>
+    
+</struts>

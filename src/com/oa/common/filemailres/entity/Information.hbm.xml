@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.oa.filemailres.entity.Information" table="t_information">
+		<id name="id" column="id" length="32">
+			<generator class="uuid" />
+		</id>
+		
+		<many-to-one name="empSend" cascade="all" not-null="true" class="com.oa.personal.entity.Employee"  column="send_id" />
+		<many-to-one name="emp" cascade="all" not-null="true" class="com.oa.personal.entity.Employee"  column="emp_id" />
+		<many-to-one name="empReceiver" cascade="all" not-null="true"  class="com.oa.personal.entity.Employee"  column="rec_id" />
+		
+		<property name="topical" />
+		<property name="info" />
+		<property name="manystate" />
+		<property name="date" >
+            <column name="date" sql-type="datetime" length="20" />
+		</property>
+		<property name="status" />
+		<property name="state" />
+		<property name="undifined" />
+		
+	</class>
+</hibernate-mapping>
