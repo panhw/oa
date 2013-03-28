@@ -92,9 +92,9 @@ public class InformationAction extends ActionSupport implements ServletRequestAw
 		Employee emp = (Employee) session.getAttribute("emp");
 		System.out.println(emp.getId()+"---------------");
 		
-		Employee emp2 = emp;
+		Employee emp2 = new Employee();
 		//根据ID 获取收件人对象
-		//emp2.setId("abc");
+		emp2.setId(empid);
 		
 		information.setEmpSend(emp);
 		information.setEmpReceiver(emp);
