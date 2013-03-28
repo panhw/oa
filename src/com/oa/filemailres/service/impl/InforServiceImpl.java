@@ -22,14 +22,16 @@ public class InforServiceImpl implements InforService {
 
 
 	public Map<String, Integer> initemail(Employee emp) {
-		String sql="from Information i where i.manystate='0' and i.status='1' and i.emp.id="+"'"+emp.getId()+"'";
+		/*String sql="from Information i where i.manystate='0' and i.status='1' and i.emp.id="+"'"+emp.getId()+"'";
 		List<Information> infos = infordao.list(sql);	
 		Map<String, Integer> map = new HashMap<String, Integer>();
 		map.put("many", infos.size());
 		String sql2="from Information i where i.manystate='1' and i.status='1' and i.emp.id="+"'"+emp.getId()+"'";
 		infos = infordao.list(sql2);
 		map.put("no", infos.size());
-		return map;
+		String sql3 = "select count(o) from Information i where i.manystate='3' and i.emp.id="+"'"+emp.getId()+"'";
+		int c = infordao.list(sql3);*/
+		return infordao.initeData(emp);
 	}
 
 	public List<Information> caogao(int star, int step) {
@@ -71,11 +73,14 @@ public class InforServiceImpl implements InforService {
 		//保存发件
 		infordao.addInfo(info);
 		System.out.println(info);
+		
 		Information infor = new Information();
 		infor.setEmpReceiver(info.getEmpReceiver());
 		infor.setEmp(info.getEmpReceiver());
 		infor.setEmpSend(info.getEmpSend());
 		infor.setInfo(info.getInfo());
+		infor.setTopical(info.getTopical());
+		infor.setDate(info.getDate());
 		infor.setState("1");
 		infor.setStatus("1");
 		infor.setManystate("1");

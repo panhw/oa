@@ -29,6 +29,8 @@ public class InformationAction extends ActionSupport implements ServletRequestAw
 	
 	private int many;
 	private int noreading;
+	private int caogao;
+	private int laji;
 	
 	/**
 	 * 初始化界面
@@ -41,6 +43,9 @@ public class InformationAction extends ActionSupport implements ServletRequestAw
 		System.out.println(map);
 		many=(Integer) map.get("many");
 		noreading = (Integer) map.get("no");
+		caogao = (Integer) map.get("caogao");
+		laji = map.get("laji");
+		System.out.println(map+"++++++++++++++++++++++");
 		return "success";
 	}
 
@@ -159,6 +164,22 @@ public class InformationAction extends ActionSupport implements ServletRequestAw
 
 	public void setServletRequest(HttpServletRequest req) {
 		this.req=req;
+	}
+
+	public int getCaogao() {
+		return caogao;
+	}
+
+	public void setCaogao(int caogao) {
+		this.caogao = caogao;
+	}
+
+	public int getLaji() {
+		return laji;
+	}
+
+	public void setLaji(int laji) {
+		this.laji = laji;
 	}
 
 	
