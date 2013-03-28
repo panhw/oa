@@ -23,6 +23,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    <a href="/oa/email!login">登录邮箱！模拟中</a>
+    <a href="/oa/email!login?empid=abc">张三登陆 </a>
+    <a href="/oa/email!login?empid=123">李四登陆</a>
+    <a href="/oa/email!login?empid=234">王二登陆</a>
   </body>
 </html>

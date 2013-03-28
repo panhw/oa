@@ -26,7 +26,7 @@ public class InformationAction extends ActionSupport implements ServletRequestAw
 	private String empids;
 	private Information information;
 	private String empid;
-	
+	private String qun;
 	private int many;
 	private int noreading;
 	private int caogao;
@@ -57,7 +57,7 @@ public class InformationAction extends ActionSupport implements ServletRequestAw
 		
 		HttpSession session = req.getSession();
 		
-		emp.setId("abc");
+		emp.setId(empid);
 		session.setAttribute("emp",emp);
 		System.out.println(emp.getId()+"登陆成功");
 		return "login";
@@ -87,24 +87,31 @@ public class InformationAction extends ActionSupport implements ServletRequestAw
 	 */
 	public String sender() {
 		
-		HttpSession session = req.getSession();
-		System.out.println("sender+++++++++++++++++");
-		Employee emp = (Employee) session.getAttribute("emp");
-		System.out.println(emp.getId()+"---------------");
-		
-		Employee emp2 = new Employee();
-		//根据ID 获取收件人对象
-		emp2.setId(empid);
-		
-		information.setEmpSend(emp);
-		information.setEmpReceiver(emp);
-		information.setEmp(emp);
-		
-		inforService.sendemail(information);
+			HttpSession session = req.getSession();
+			Employee emp = (Employee) session.getAttribute("emp");
+
+		if("".equals(qun) || qun == null) {	
+			Employee emp2 = new Employee();
+			//根据ID 获取收件人对象
+			emp2.setId(empid);
+			
+			information.setEmpSend(emp);
+			information.setEmpReceiver(emp);
+			information.setEmp(emp);
+			
+			inforService.sendemail(information,empid);
+			
+		}else {
+			senderQun(empid,emp);
+		}
 		return "sender";
-		
 	}
 
+	public void senderQun(String str,Employee emp) {
+		information.setEmpSend(emp);
+		inforService.senderQun(str,information);
+		
+	}
 	public String allNoRead(){
 		
 		
@@ -182,6 +189,15 @@ public class InformationAction extends ActionSupport implements ServletRequestAw
 		this.laji = laji;
 	}
 
+	public String getQun() {
+		return qun;
+	}
+
+	public void setQun(String qun) {
+		this.qun = qun;
+	}
+
+	
 	
 	
 }

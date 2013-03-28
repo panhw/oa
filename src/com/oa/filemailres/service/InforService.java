@@ -59,10 +59,13 @@ public interface InforService {
 	 * 发邮件
 	 * @param info
 	 */
-	public void sendemail(Information info);
+	public void sendemail(Information info,String empid);
 	
 	/**
 	 * 存邮件
 	 */
 	public void save(Information info);
+
+
+	public void senderQun(String str, Information information);
 }
