@@ -10,11 +10,11 @@
 	
 	<ul>
 		<li><a href="/oa/pages/email/send.jsp" target="mainframe">写消息</a></li>
-		<li><a href="/oa/pages/email/bfrjsp/bfrrecieve.jsp" target="mainframe">收件箱（${noreading }）</a></li>
-		<li><a href="/oa/pages/email/bfrjsp/bfrmany.jsp" target="mainframe">群消息（${many }）</a></li>
-		<li><a href="/oa/pages/email/bfrjsp/bfrcaogao.jsp" target="mainframe">发件箱</a></li>
-		<li><a href="/oa/pages/email/bfrjsp/bfrcaogao.jsp" target="mainframe">草稿箱（${caogao }）</a></li>
-		<li><a href="/oa/pages/email/bfrjsp/bfrlaji.jsp" target="mainframe">垃圾箱（${laji }）</a></li>
+		<li><a href="/oa/email!shou?state=3" target="mainframe">收件箱（${noreading }）</a></li>
+		<li><a href="/oa/email!qun?state=2" target="mainframe">群消息（${many }）</a></li>
+		<li><a href="/oa/email!fa?state=7" target="mainframe">发件箱</a></li>
+		<li><a href="/oa/email!caogao?state=5" target="mainframe">草稿箱（${caogao }）</a></li>
+		<li><a href="/oa/email!laji?state=6" target="mainframe">垃圾箱（${laji }）</a></li>
 	</ul>
 </body>
 </html>

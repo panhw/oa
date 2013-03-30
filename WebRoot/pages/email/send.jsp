@@ -1,15 +1,26 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
-    <%@ taglib uri="http://java.sun.com/jsf/core" prefix="c"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+<%@	taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Insert title here</title>
-</head>
+  <head>
+    <base href="<%=basePath%>">
+    
+    <title>My JSP 'showlist.jsp' starting page</title>
+    
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is my page">
+	
+  </head>
 <body>
 	<form name="frm" method="post" action=""> 
-		主题：<input type="text" name="information.topical" id="topical" /> <br />
+		主题：<input type="text" name="information.topical" id="topical" value="${information.topical }" /> <br />
 		收件人：<input type="text" id="tid" readonly="readonly" />
 			<input type="hidden" name="empid" id="hid" >
 			<input type="button" value="清空" id="qinkong" />
@@ -25,7 +36,10 @@
 				<option value="234">王麻子</option>
 			</select>
 		<br />		
-		<textarea rows="20" cols="50" name="information.info"></textarea><br />
+		<textarea rows="20" cols="50" name="information.info">
+		
+${information.info }
+		</textarea><br />
 		<input type="button" value="立即发送" onclick="sender()" />
 		<input type="button" value="保存至草稿箱" onclick="save()"/>
 	</form>

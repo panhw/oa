@@ -93,4 +93,15 @@ public interface InforService {
 	 * @param empid
 	 */
 	public Information read(String empid);
+	
+	/**
+	 * 清空
+	 * @param emp
+	 */
+	public void qing(Employee emp);
+	
+	/**
+	 * 还原
+	 */
+	public void huan(String empid);
 }

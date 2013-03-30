@@ -68,4 +68,11 @@ public interface inforDao {
 	 * @param empid
 	 */
 	public Information read(String empid);
+	
+public void qing(Employee emp);
+	
+	/**
+	 * 还原
+	 */
+	public void huan(String empid);
 }

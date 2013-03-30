@@ -30,7 +30,15 @@
     		
     		<result name="del" type="redirectAction">/email!allNoRead</result>	
     		
-    		<result name="reRead" type="redirectAction">/email!allNoRead</result>			
+    		<result name="reRead" type="redirectAction">/email!allNoRead</result>
+    		
+    		<result name="huan" type="redirectAction">/email!allNoRead</result>
+    		
+    		<result name="qing" type="redirectAction">/email!allNoRead</result>
+    			
+    		<result name="intransit">/pages/email/send.jsp</result>	
+    		
+    		<result name="reply">/pages/email/reply.jsp</result>
     	</action>
     	
     	

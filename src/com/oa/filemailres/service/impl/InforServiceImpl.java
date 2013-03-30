@@ -178,6 +178,19 @@ public class InforServiceImpl implements InforService {
 		return infordao.read(empid);
 	}
 
+	public void qing(Employee emp) {
+		infordao.qing(emp);
+	}
+
+	public void huan(String empid) {
+		String ids[] = empid.split(";");
+		for(String id:ids){
+			if(id !=null){
+				infordao.huan(id);
+			}
+		}
+	}
+
 
 	
 

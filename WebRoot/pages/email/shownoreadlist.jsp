@@ -23,9 +23,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     g共（${many+noreading }）未读邮件 
      
     <form name="frm" id="frm" action="" method="post">
-  	<input type="button" value="删除" onclick="deleteBtn()"/>
+    <c:if test="${state != 6 }">
+  		<input type="button" value="删除" onclick="deleteBtn()"/>
+  	</c:if>
   	<input type="button" value="彻底删除" onclick="delBtn()" />
-  	<input type="button" value="标记为已读" onclick="readBtn()" />
+  	 <c:if test="${state != 5 }">
+  			<input type="button" value="标记为已读" onclick="readBtn()" />
+  	</c:if> 
+  	<c:if test="${state eq 6 }">
+  		<input type="button" value="还原" onclick="huanBtn()"/>
+  		<input type="button" value="清空" onclick="qingBtn()"/>
+  	</c:if>
   	
   			<table id="data" width="100%" align="center">
 				<tr>
@@ -152,6 +160,47 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	  		}
   		}
   	}
+  	
+  	
+  	//还原
+  	function huanBtn(){
+  		
+	  	var ids =  document.getElementsByName('ID');
+  		var empid = '';
+  		var j = 0;
+	  	for(var i=0; i<ids.length; i++){
+	  		if(ids[i].checked){
+	  			j++;
+	  			empid += ids[i].value + ';';
+	  		}
+	  	}
+	  	if(j == 0){
+	  		alert('请至少选择一条数据进行操作！1');
+	  	}else{
+	  		
+				if(confirm("您确定要将选中的数据删除吗？")){
+	//				removeDefaultHintMsg();
+		  			document.frm.action='/oa/email!huan?empid='+empid;	
+		  			alert("还原");
+		  			document.frm.submit();
+	  			}
+	  		
+  		}
+  	}
+  	
+  	//清空
+  	function qingBtn(){
+  		
+				if(confirm("您确定要清空垃圾箱吗？")){
+	//				removeDefaultHintMsg();
+		  			document.frm.action='/oa/email!qing';	
+		  			alert("清空");
+		  			document.frm.submit();
+	  			}
+	  		
+
+  	}
+  	
   
   </script>
 </html>
