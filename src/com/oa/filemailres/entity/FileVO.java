@@ -9,7 +9,7 @@ import com.oa.personal.entity.Employee;
  * @author pan
  *
  */
-public class File {
+public class FileVO {
 
 	/**
 	 * 文件ID
@@ -43,11 +43,11 @@ public class File {
 	 *  扩展部分 未定义
 	 */
 	private String undefined;
-	public File() {
+	public FileVO() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public File(String id, Employee employee, String url, Date date,
+	public FileVO(String id, Employee employee, String url, Date date,
 			String fileName, int state, int share, String undefined) {
 		super();
 		this.id = id;
