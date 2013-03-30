@@ -29,13 +29,10 @@ public interface inforDao {
 	public List<Information> select(String str);
 	
 	/**
-	 * 分页查找
-	 * @param sql
-	 * @param star
-	 * @param step
-	 * @return
+	 * 查询所有未读
+	 * @return 
 	 */
-	public List<Information> list(String sql,int star ,int step) ;
+	public List<Information> noreading(Employee emp,int state,int page);
 	
 	/**
 	 * 存消息
@@ -49,4 +46,26 @@ public interface inforDao {
 	 * @return
 	 */
 	public Map<String,Integer> initeData(Employee emp);
+	
+	/**
+	 * 删除邮件
+	 */
+	public void delete(String id);
+	
+	/**
+	 * 彻底删除邮件
+	 */
+	public void del(String id);
+	
+	/**
+	 * 标记为已读
+	 */
+	
+	public void reRead(String empid);
+	
+	/**
+	 * 查看邮件
+	 * @param empid
+	 */
+	public Information read(String empid);
 }

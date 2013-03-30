@@ -2,6 +2,7 @@ package com.oa.filemailres.action;
 
 import java.sql.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -27,10 +28,16 @@ public class InformationAction extends ActionSupport implements ServletRequestAw
 	private Information information;
 	private String empid;
 	private String qun;
+	
 	private int many;
 	private int noreading;
 	private int caogao;
 	private int laji;
+	private int all;
+	private int pageNO;
+	//判断查询未读条件 0群未读   1未读  4未读
+ 	private int state;
+	private List<Information> infors;
 	
 	/**
 	 * 初始化界面
@@ -40,12 +47,10 @@ public class InformationAction extends ActionSupport implements ServletRequestAw
 		Employee emp = (Employee) session.getAttribute("emp");
 		Map<String,Integer>  map = new HashMap<String,Integer>();
 		map=inforService.initemail(emp);
-		System.out.println(map);
 		many=(Integer) map.get("many");
 		noreading = (Integer) map.get("no");
 		caogao = (Integer) map.get("caogao");
 		laji = map.get("laji");
-		System.out.println(map+"++++++++++++++++++++++");
 		return "success";
 	}
 
@@ -59,7 +64,6 @@ public class InformationAction extends ActionSupport implements ServletRequestAw
 		
 		emp.setId(empid);
 		session.setAttribute("emp",emp);
-		System.out.println(emp.getId()+"登陆成功");
 		return "login";
 	}
 
@@ -69,11 +73,9 @@ public class InformationAction extends ActionSupport implements ServletRequestAw
 	 */
 	public String save() {
 		
-		System.out.println("+++++++++++++++++++++++++++");
 		HttpSession session = req.getSession();
 		
 		Employee emp = (Employee) session.getAttribute("emp");
-		System.out.println(emp.getId()+"----------");
 		information.setEmpSend(emp);
 		information.setEmpReceiver(emp);
 		information.setEmp(emp);
@@ -107,20 +109,72 @@ public class InformationAction extends ActionSupport implements ServletRequestAw
 		return "sender";
 	}
 
+	/**
+	 * 群发
+	 * @param str
+	 * @param emp
+	 */
 	public void senderQun(String str,Employee emp) {
 		information.setEmpSend(emp);
 		inforService.senderQun(str,information);
 		
 	}
-	public String allNoRead(){
-		
-		
-		return "allNoRead";
-	}
+	
 	/**
-	 * 查询草稿箱
+	 * 查询所有未读
 	 * @return
 	 */
+	public String allNoRead(){
+		HttpSession session = req.getSession();
+		Employee emp = (Employee) session.getAttribute("emp");
+		Map<String,Integer>  map = new HashMap<String,Integer>();
+		map=inforService.initemail(emp);
+		if(pageNO < 1){
+			pageNO = 1;
+		}
+		all=(int)map.get("all");
+		many=(Integer) map.get("many");
+		noreading = (Integer) map.get("no");
+		all=(all%10==0)?all/10:all/10+1;
+		if(pageNO > all){
+			pageNO -= 1;
+		}
+		int page=(pageNO-1)*10;
+		
+		System.out.println(emp.getId()+page+state+"----------------------");
+		infors = inforService.noreading(emp, state, page);
+		while(infors.size()<10){
+			infors.add(new Information());
+		}
+		return "allNoRead";
+	}
+	
+	//删除消息
+	public String delet(){
+		
+		System.out.println(empid);
+		inforService.delete(empid);
+		return "delete";
+	}
+	
+	//彻底删除
+	public String del(){
+		
+		inforService.del(empid);
+		return "del";
+	}
+	//标记为已读
+	public String reRead(){
+		inforService.reRead(empid);
+		return "reRead";
+	}
+	//读邮件
+	public String read() {
+		
+		information = inforService.read(empid);
+		return "read";
+	}
+	
 	public InforService getInforService() {
 		return inforService;
 	}
@@ -197,7 +251,36 @@ public class InformationAction extends ActionSupport implements ServletRequestAw
 		this.qun = qun;
 	}
 
-	
-	
-	
+	public int getAll() {
+		return all;
+	}
+
+	public void setAll(int all) {
+		this.all = all;
+	}
+
+	public List<Information> getInfors() {
+		return infors;
+	}
+
+	public void setInfors(List<Information> infors) {
+		this.infors = infors;
+	}
+
+	public int getPageNO() {
+		return pageNO;
+	}
+
+	public void setPageNO(int pageNO) {
+		this.pageNO = pageNO;
+	}
+
+	public int getState() {
+		return state;
+	}
+
+	public void setState(int state) {
+		this.state = state;
+	}
+
 }

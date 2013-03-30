@@ -8,6 +8,6 @@
 </head>
 <body>
 	欢迎光临！<br />
-	<a href="/oa/email!allNoRead">你有${many+noreading }未读邮件</a>
+	<a href="/oa/email!allNoRead?state=4">你有${many+noreading }未读邮件</a>
 </body>
 </html>

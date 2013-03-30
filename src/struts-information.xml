@@ -17,9 +17,20 @@
     	<action name="email" class="informationAction">
     		<!-- 模拟登陆 -->
     		<result name="login">/pages/email/email.jsp</result>
+    		
     		<result name="allNoRead">/pages/email/shownoreadlist.jsp</result>
+    		
     		<result name="save" type="redirectAction">/bfrmainInfor</result>
-    		<result name="sender" type="redirectAction">/bfrmainInfor</result>	
+    		
+    		<result name="sender" type="redirectAction">/bfrmainInfor</result>
+    		
+    		<result name="read">/pages/email/read.jsp</result>	
+    		
+    		<result name="delete" type="redirectAction">/email!allNoRead</result>
+    		
+    		<result name="del" type="redirectAction">/email!allNoRead</result>	
+    		
+    		<result name="reRead" type="redirectAction">/email!allNoRead</result>			
     	</action>
     	
     	

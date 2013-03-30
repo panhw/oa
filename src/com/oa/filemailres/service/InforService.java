@@ -23,10 +23,10 @@ public interface InforService {
 	
 
 	/**
-	 * 查询未读
+	 * 查询所有未读
 	 * @return 
 	 */
-	public List<Information> noreading(int star,int step);
+	public List<Information> noreading(Employee emp,int state,int page);
 	
 	/**
 	 * 查询收件箱
@@ -67,5 +67,30 @@ public interface InforService {
 	public void save(Information info);
 
 
+	/**
+	 * 发群邮件
+	 * @param str
+	 * @param information
+	 */
 	public void senderQun(String str, Information information);
+	
+	//删除邮件
+	public void delete(String empid);
+	
+	/**
+	 * 彻底删除邮件
+	 */
+	public void del(String empid);
+	
+	/**
+	 * 标记为已读
+	 */
+	
+	public void reRead(String empid);
+	
+	/**
+	 * 查看邮件
+	 * @param empid
+	 */
+	public Information read(String empid);
 }

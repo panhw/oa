@@ -40,9 +40,11 @@ public class InforServiceImpl implements InforService {
 		return null;
 	}
 
-	public List<Information> noreading(int star, int step) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Information> noreading(Employee emp,int state, int page) {
+		
+		List<Information> list = infordao.noreading(emp, state, page);
+		
+		return list;
 	}
 
 	public List<Information> receiver(int star, int step) {
@@ -143,6 +145,37 @@ public class InforServiceImpl implements InforService {
 			info.setUndifined(str); 
 			infordao.addInfo(info);
 		}
+	}
+
+	public void delete(String empid) {
+		String ids[] = empid.split(";");
+		for(String id:ids){
+			if(id !=null){
+				infordao.delete(id);
+			}	
+		}
+	}
+
+	public void del(String empid) {
+		String ids[] = empid.split(";");
+		for(String id:ids){
+			if(id !=null){
+				infordao.del(id);
+			}
+		}
+	}
+
+	public void reRead(String empid) {
+		String ids[] = empid.split(";");
+		for(String id:ids){
+			if(id !=null){
+				infordao.reRead(id);
+			}
+		}
+	}
+
+	public Information read(String empid) {
+		return infordao.read(empid);
 	}
 
 

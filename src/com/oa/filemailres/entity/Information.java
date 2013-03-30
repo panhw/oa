@@ -51,7 +51,7 @@ public class Information {
 	 */
 	private String status;
 	/**
-	 * 邮件状态 0 删除 1正常
+	 * 邮件状态 0 删除 1正常 3为彻底删除
 	 */
 	private String state;
 	/**
