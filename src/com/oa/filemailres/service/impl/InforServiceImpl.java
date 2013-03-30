@@ -20,26 +20,12 @@ public class InforServiceImpl implements InforService {
 	private inforDao infordao;
 
 	
-
-
 	public Map<String, Integer> initemail(Employee emp) {
-		/*String sql="from Information i where i.manystate='0' and i.status='1' and i.emp.id="+"'"+emp.getId()+"'";
-		List<Information> infos = infordao.list(sql);	
-		Map<String, Integer> map = new HashMap<String, Integer>();
-		map.put("many", infos.size());
-		String sql2="from Information i where i.manystate='1' and i.status='1' and i.emp.id="+"'"+emp.getId()+"'";
-		infos = infordao.list(sql2);
-		map.put("no", infos.size());
-		String sql3 = "select count(o) from Information i where i.manystate='3' and i.emp.id="+"'"+emp.getId()+"'";
-		int c = infordao.list(sql3);*/
+		
 		return infordao.initeData(emp);
 	}
 
-	public List<Information> caogao(int star, int step) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
+	
 	public List<Information> noreading(Employee emp,int state, int page) {
 		
 		List<Information> list = infordao.noreading(emp, state, page);
@@ -47,23 +33,9 @@ public class InforServiceImpl implements InforService {
 		return list;
 	}
 
-	public List<Information> receiver(int star, int step) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public List<Information> many(int star, int step) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public List<Information> laji(int star, int step) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	public List<Information> select(String str, int star, int step) {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 

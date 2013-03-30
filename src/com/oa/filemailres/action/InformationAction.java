@@ -1,4 +1,4 @@
-package com.oa.filemailres.action;
+ package com.oa.filemailres.action;
 
 import java.sql.Date;
 import java.util.HashMap;
@@ -21,22 +21,34 @@ import freemarker.template.SimpleDate;
 
 public class InformationAction extends ActionSupport implements
 		ServletRequestAware {
-
+	//service层
 	private InforService inforService;
+	//获取req对象
 	public HttpServletRequest req;
+	// 暂时为定义
 	private String empids;
+	//传送数据的Information 对象
 	private Information information;
+	//从页面传来的所需ID串
 	private String empid;
+	//判断是否是群发消息
 	private String qun;
 
+	//群未读数
 	private int many;
+	//收未读数
 	private int noreading;
+	//草稿箱条数
 	private int caogao;
+	//垃圾箱条数
 	private int laji;
+	//分页 总页数
 	private int all;
+	//分页 当前页
 	private int pageNO;
 	// 判断查询未读条件 0群未读 1未读 4未读
 	private int state;
+	//显示列表集合
 	private List<Information> infors;
 
 	/**
@@ -119,6 +131,7 @@ public class InformationAction extends ActionSupport implements
 	 */
 	public void senderQun(String str, Employee emp) {
 		information.setEmpSend(emp);
+		qun="";
 		inforService.senderQun(str, information);
 
 	}
@@ -154,7 +167,11 @@ public class InformationAction extends ActionSupport implements
 		return "allNoRead";
 	}
 
-	// 删除消息
+	
+	/**
+	 *删除消息
+	 * @return
+	 */
 	public String delet() {
 
 		System.out.println(empid);
@@ -162,27 +179,39 @@ public class InformationAction extends ActionSupport implements
 		return "delete";
 	}
 
-	// 彻底删除
+	/**
+	 *彻底删除
+	 * @return
+	 */
 	public String del() {
 
 		inforService.del(empid);
 		return "del";
 	}
 
-	// 标记为已读
+	/**
+	 * 标记为已读
+	 * @return
+	 */
 	public String reRead() {
 		inforService.reRead(empid);
 		return "reRead";
 	}
 
-	// 读邮件
+	/**
+	 *	// 读邮件
+	 * @return
+	 */
 	public String read() {
 
 		information = inforService.read(empid);
 		return "read";
 	}
 
-	// 转发
+	/**
+	 *	// 转发
+	 * @return
+	 */
 	public String intransit() {
 		System.out.println("转发");
 		information = inforService.read(empid);
@@ -192,7 +221,11 @@ public class InformationAction extends ActionSupport implements
 		return "intransit";
 	}
 
-	// 回复
+	
+	/**
+	 *	// 回复
+	 * @return
+	 */
 	public String replyinfor() {
 		System.out.println("回复");
 		information = inforService.read(empid);
@@ -201,8 +234,11 @@ public class InformationAction extends ActionSupport implements
 				+ information.getInfo());
 		return "reply";
 	}
-
-	// 收件箱
+ 
+	/**
+	 *	//收件箱
+	 * @return
+	 */
 	public String shou() {
 		HttpSession session = req.getSession();
 		Employee emp = (Employee) session.getAttribute("emp");
@@ -229,7 +265,11 @@ public class InformationAction extends ActionSupport implements
 		return "allNoRead";
 	}
 
-	// 群邮件
+	
+	/**
+	 *	// 群邮件
+	 * @return
+	 */
 	public String qun() {
 		HttpSession session = req.getSession();
 		Employee emp = (Employee) session.getAttribute("emp");
@@ -256,7 +296,10 @@ public class InformationAction extends ActionSupport implements
 		return "allNoRead";
 	}
 
-	// 垃圾箱
+	/**
+	 *	// 垃圾箱
+	 * @return
+	 */
 	public String laji() {
 		HttpSession session = req.getSession();
 		Employee emp = (Employee) session.getAttribute("emp");
@@ -283,7 +326,10 @@ public class InformationAction extends ActionSupport implements
 		return "allNoRead";
 	}
 
-	// 草稿
+	/**
+	 *	// 草稿
+	 * @return
+	 */
 	public String caogao() {
 		HttpSession session = req.getSession();
 		Employee emp = (Employee) session.getAttribute("emp");
@@ -309,8 +355,11 @@ public class InformationAction extends ActionSupport implements
 		}
 		return "allNoRead";
 	}
-
-	// 发件箱
+	
+	/**
+	 *	// 发件箱
+	 * @return
+	 */
 	public String fa() {
 		HttpSession session = req.getSession();
 		Employee emp = (Employee) session.getAttribute("emp");
@@ -337,7 +386,11 @@ public class InformationAction extends ActionSupport implements
 		return "allNoRead";
 	}
 
-	// 清空
+	
+	/**
+	 *	// 清空
+	 * @return
+	 */
 	public String qing() {
 		HttpSession session = req.getSession();
 		Employee emp = (Employee) session.getAttribute("emp");
@@ -346,7 +399,11 @@ public class InformationAction extends ActionSupport implements
 		return "qing";
 	}
 
-	// 清空
+	
+	/**
+	 *	//还原
+	 * @return
+	 */
 	public String huan() {
 		inforService.huan(empid);
 		return "huan";

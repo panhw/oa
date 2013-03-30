@@ -15,12 +15,6 @@ public interface InforService {
 	public Map<String, Integer> initemail(Employee emp);
 	
 	
-	/**
-	 * 查询草稿箱
-	 * @return 
-	 */
-	public List<Information> caogao(int star,int step);
-	
 
 	/**
 	 * 查询所有未读
@@ -28,23 +22,7 @@ public interface InforService {
 	 */
 	public List<Information> noreading(Employee emp,int state,int page);
 	
-	/**
-	 * 查询收件箱
-	 * @return 
-	 */
-	public List<Information> receiver(int star,int step);
 	
-	/**
-	 * 查询群邮箱
-	 * @return 
-	 */
-	public List<Information> many(int star,int step);
-	
-	/**
-	 * 查询垃圾箱
-	 * @return 
-	 */
-	public List<Information> laji(int star,int step);
 	
 	/**
 	 * 查询收索内容
