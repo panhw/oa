@@ -8,6 +8,11 @@
     <!-- class为spring中*action。xml名字 -->
     <package name="file" extends="struts-default" >
     	
+    	<action name="fileAction" class="fileAction">
+    		<result name="test" type="redirectAction" >/fileAction!login</result>
+    		<result name="login" >/WEB-INF/pages/file/login.jsp</result>
+    	</action>
+    	
     	<action name="fileUpAction" class="fileUpAction">
     		<result name="success">/pages/file/fileload.jsp</result>
     		<interceptor-ref name="defaultStack" />

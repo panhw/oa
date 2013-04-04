@@ -14,4 +14,8 @@
 	<bean id="infordao" class="com.oa.filemailres.dao.impl.inforDaoImpl">
 		<property name="sessionFactory"  ref="sessionFactory" />
 	</bean>
+	
+	<bean id="fileDao" class="com.oa.filemailres.dao.impl.FileDaoImpl">
+		<property name="sessionFactory"  ref="sessionFactory" />
+	</bean>
 </beans>

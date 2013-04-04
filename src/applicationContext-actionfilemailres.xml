@@ -20,4 +20,7 @@
 	<bean id="fileLoadAction" class="com.oa.filemailres.action.FileLoadAction">
 		
 	</bean>
+	<bean id="fileAction" class="com.oa.filemailres.action.FileAction">
+		<property name="fileService" ref="fileService" />
+	</bean>
 </beans>

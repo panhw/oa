@@ -28,8 +28,6 @@ public class FileAction extends ActionSupport implements ServletRequestAware{
 	
 	public String execute(){
 		
-		emp.setId("abc");
-		emp.setName("张三");
 		List<FileVO> folders=fileService.findAllFolders(emp);
 		List<FileVO> files =null;
 		if(folders!=null&&folders.size()!=0){
@@ -42,6 +40,17 @@ public class FileAction extends ActionSupport implements ServletRequestAware{
 		return null;
 	}
 	
+	public String test(){
+		
+		return "test";
+	}
+	
+	public String login(){
+		HttpSession session = request.getSession();
+		session.setAttribute("emp", emp);
+		return "login";
+		
+	}
 	public String files(){
 		List<FileVO> files = fileService.findAllFiles(fatherid);
 		request.setAttribute("files", files);
@@ -94,4 +103,34 @@ public class FileAction extends ActionSupport implements ServletRequestAware{
 	public void setServletRequest(HttpServletRequest request) {
 		this.request = request;
 	}
+
+	public String getFatherid() {
+		return fatherid;
+	}
+
+	public void setFatherid(String fatherid) {
+		this.fatherid = fatherid;
+	}
+
+	public Employee getEmp() {
+		return emp;
+	}
+
+	public void setEmp(Employee emp) {
+		this.emp = emp;
+	}
+
+	public String getFolderName() {
+		return folderName;
+	}
+
+	public void setFolderName(String folderName) {
+		this.folderName = folderName;
+	}
+
+	public void setFileService(FileService fileService) {
+		this.fileService = fileService;
+	}
+	
+	
 }
