@@ -10,5 +10,7 @@
     <constant name="struts.objectFactory" value="spring" />
     
     <include file="struts-personal.xml"></include>
+  	<include file="struts-information.xml"></include>
+  	<include file="struts-file.xml"></include>
     
 </struts>

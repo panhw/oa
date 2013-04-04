@@ -6,7 +6,7 @@
 			<generator class="uuid" />
 		</id>
 		
-		<many-to-one name="room" cascade="all" not-null="true" class="com.oa.personal.entity.Room"  column="room _id"/>
+		<many-to-one name="room" cascade="all" not-null="true" class="com.oa.filemailres.entity.Room"  column="room_id"/>
 		<many-to-one name="employee" cascade="all" not-null="true"  class="com.oa.personal.entity.Employee"  column="emp_id"/>
 		<property name="name" />
 		<property name="starDate" />

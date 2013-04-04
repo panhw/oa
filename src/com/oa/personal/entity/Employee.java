@@ -17,7 +17,7 @@ import com.oa.common.enumeration.Sex;
  */
 public class Employee {
 	/** 主键 */
-	private Integer id;
+	private String id;
 	/** 员工的姓名 */
 	private String name;
 	/** 员工密码 */
@@ -38,11 +38,10 @@ public class Employee {
 	private Date birthday;
 	/** 员工所属部门 */
 	private Department department;
-	
-	public Integer getId() {
+	public String getId() {
 		return id;
 	}
-	public void setId(Integer id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	public String getName() {
@@ -105,6 +104,7 @@ public class Employee {
 	public void setDepartment(Department department) {
 		this.department = department;
 	}
-
+	
+	
 
 }

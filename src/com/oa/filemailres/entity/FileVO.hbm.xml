@@ -1,17 +1,18 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping SYSTEM "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
 <hibernate-mapping>
-	<class name="com.oa.filemailres.entity.File" table="t_file">
+	<class name="com.oa.filemailres.entity.FileVO" table="t_file">
 		<id name="id" column="id" length="32">
 			<generator class="uuid" />
 		</id>
 		
 		<many-to-one name="employee" cascade="all" not-null="true" class="com.oa.personal.entity.Employee" column="emp_id"/>
+		<many-to-one name="fatherfile" cascade="all" not-null="true" class="com.oa.filemailres.entity.FileVO" column="father_id"/>
 		<property name="url"  />
 		<property name="date"  />
 		<property name="fileName"  />
 		<property name="state"  />
-		<property name="share"  />
+		<property name="type"  />
 		<property name="undefined"  />
 
 	</class>

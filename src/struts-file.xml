@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    
+    <!-- class为spring中*action。xml名字 -->
+    <package name="file" extends="struts-default" >
+    	
+    	<action name="fileUpAction" class="fileUpAction">
+    		<result name="success">/pages/file/fileload.jsp</result>
+    		<interceptor-ref name="defaultStack" />
+			<interceptor-ref name="fileUpload"  >
+			<param name="maximumSize">5485760</param>
+			<param name="allowedExtensions">.exe,.html</param>
+			</interceptor-ref>
+    		
+    	</action>
+    	
+    	<action name="fileLoadAction" class="fileLoadAction">
+    		<result type="stream">
+               <param name="contentType">application/octet-stream</param>
+               <param name="inputName">inputStream</param>
+               <param name="contentDisposition">attachment;filename="${name }"</param>
+               <param name="bufferSize">4096</param>
+           </result>
+
+    	</action>
+   
+   	 </package>
+    
+</struts>
