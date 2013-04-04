@@ -79,6 +79,15 @@ public class InformationAction extends ActionSupport implements
 		return "login";
 	}
 
+	public String test(){
+		
+		return "test";
+	}
+	
+	public String add(){
+		
+		return "add";
+	}
 	/**
 	 * 存搞
 	 * 

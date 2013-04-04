@@ -9,26 +9,28 @@
     <package name="information" extends="struts-default" >
     	
     	<action name="bfrmainInfor" class="informationAction" method="inite">
-    		<result name="success">/WEB-INF/pages/email/main.jsp</result>
+    		<result name="success">WEB-INF/pages/email/main.jsp</result>
     	</action>
     	<action name="bfrleftInfor" class="informationAction" method="inite">
-    		<result name="success">/WEB-INF/pages/email/left.jsp</result>
+    		<result name="success">WEB-INF/pages/email/left.jsp</result>
     	</action>
     	<action name="email" class="informationAction">
     		<!-- 模拟登陆 -->
-    		<result name="login">/WEB-INF/pages/email/email.jsp</result>
+    		<result name="login">WEB-INF/pages/email/email.jsp</result>
+    		<result name="test">WEB-INF/pages/email/login.jsp</result>
+    		<result name="add">WEB-INF/pages/email/send.jsp</result>
     		
-    		<result name="allNoRead">/WEB-INF/pages/email/shownoreadlist.jsp</result>
+    		<result name="allNoRead">WEB-INF/pages/email/shownoreadlist.jsp</result>
     		
     		<result name="save" type="redirectAction">/bfrmainInfor</result>
     		
     		<result name="sender" type="redirectAction">/bfrmainInfor</result>
     		
-    		<result name="read">/WEB-INF/pages/email/read.jsp</result>	
+    		<result name="read">WEB-INF/pages/email/read.jsp</result>	
     		
-    		<result name="delete" type="redirectAction">/WEB-INF/email!allNoRead</result>
+    		<result name="delete" type="redirectAction">WEB-INF/email!allNoRead</result>
     		
-    		<result name="del" type="redirectAction">/WEB-INF/email!allNoRead</result>	
+    		<result name="del" type="redirectAction">WEB-INF/email!allNoRead</result>	
     		
     		<result name="reRead" type="redirectAction">/email!allNoRead</result>
     		
@@ -36,9 +38,9 @@
     		
     		<result name="qing" type="redirectAction">/email!allNoRead</result>
     			
-    		<result name="intransit">/WEB-INF/pages/email/send.jsp</result>	
+    		<result name="intransit">WEB-INF/pages/email/send.jsp</result>	
     		
-    		<result name="reply">/WEB-INF/pages/email/reply.jsp</result>
+    		<result name="reply">WEB-INF/pages/email/reply.jsp</result>
     	</action>
     	
     	

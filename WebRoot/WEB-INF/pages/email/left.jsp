@@ -9,7 +9,7 @@
 <body>
 	
 	<ul>
-		<li><a href="/oa/WEB-INF/pages/email/send.jsp" target="mainframe">写消息</a></li>
+		<li><a href="/oa/email!add" target="mainframe">写消息</a></li>
 		<li><a href="/oa/email!shou?state=3" target="mainframe">收件箱（${noreading }）</a></li>
 		<li><a href="/oa/email!qun?state=2" target="mainframe">群消息（${many }）</a></li>
 		<li><a href="/oa/email!fa?state=7" target="mainframe">发件箱</a></li>
