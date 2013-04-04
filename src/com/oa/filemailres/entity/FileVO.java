@@ -18,7 +18,12 @@ public class FileVO {
 	/**
 	 * 此文件用户ID
 	 */
+	
 	private Employee employee;
+	/**
+	 * 父节点
+	 */
+	private FileVO fatherfile;
 	/**
 	 * 文件地址
 	 */
@@ -32,88 +37,76 @@ public class FileVO {
 	 */
 	private String fileName;
 	/**
-	 *  文件状态
+	 *  文件状态 1 正常 2 共享 3删除
 	 */
 	private int state;
+	
 	/**
-	 *  文件是否共享
+	 * 文件还是文件夹0是文件夹 一是文件
 	 */
-	private int share;
+	private String type;
 	/**
 	 *  扩展部分 未定义
 	 */
 	private String undefined;
-	public FileVO() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-	public FileVO(String id, Employee employee, String url, Date date,
-			String fileName, int state, int share, String undefined) {
-		super();
-		this.id = id;
-		this.employee = employee;
-		this.url = url;
-		this.date = date;
-		this.fileName = fileName;
-		this.state = state;
-		this.share = share;
-		this.undefined = undefined;
-	}
-	public Date getDate() {
-		return date;
-	}
-	public Employee getEmployee() {
-		return employee;
-	}
-	public String getFileName() {
-		return fileName;
-	}
 	public String getId() {
 		return id;
-	}
-	public int getShare() {
-		return share;
-	}
-	public int getState() {
-		return state;
-	}
-	public String getUndefined() {
-		return undefined;
-	}
-	public String getUrl() {
-		return url;
-	}
-	public void setDate(Date date) {
-		this.date = date;
-	}
-	public void setEmployee(Employee employee) {
-		this.employee = employee;
-	}
-	public void setFileName(String fileName) {
-		this.fileName = fileName;
 	}
 	public void setId(String id) {
 		this.id = id;
 	}
-	public void setShare(int share) {
-		this.share = share;
+	public Employee getEmployee() {
+		return employee;
 	}
-	public void setState(int state) {
-		this.state = state;
+	public void setEmployee(Employee employee) {
+		this.employee = employee;
 	}
-	public void setUndefined(String undefined) {
-		this.undefined = undefined;
+	public FileVO getFatherfile() {
+		return fatherfile;
+	}
+	public void setFatherfile(FileVO fatherfile) {
+		this.fatherfile = fatherfile;
+	}
+	public String getUrl() {
+		return url;
 	}
 	public void setUrl(String url) {
 		this.url = url;
 	}
+	public Date getDate() {
+		return date;
+	}
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	public String getFileName() {
+		return fileName;
+	}
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
+	public int getState() {
+		return state;
+	}
+	public void setState(int state) {
+		this.state = state;
+	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	public String getUndefined() {
+		return undefined;
+	}
+	public void setUndefined(String undefined) {
+		this.undefined = undefined;
+	}
 	@Override
 	public String toString() {
-		return "File [id=" + id + ", employee=" + employee + ", url=" + url
-				+ ", date=" + date + ", fileName=" + fileName + ", state="
-				+ state + ", share=" + share + ", undefined=" + undefined + "]";
+		return "FileVO [id=" + id + ", url=" + url + ", date=" + date
+				+ ", fileName=" + fileName + ", state=" + state + ", type="
+				+ type + ", undefined=" + undefined + "]";
 	}
-	
-	
-	
 }
