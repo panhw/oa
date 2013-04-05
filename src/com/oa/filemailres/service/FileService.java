@@ -22,6 +22,13 @@ public interface FileService {
 	public List<FileVO> findAllFiles(String fatherid);
 	
 	/**
+	 * 查找子文件
+	 * @param folder
+	 * @return
+	 */
+	public List<FileVO> findAllFiles(Employee emp);
+	
+	/**
 	 * 根据ID获取文件文件夹
 	 * @param id
 	 * @return

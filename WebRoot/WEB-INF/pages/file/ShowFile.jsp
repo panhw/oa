@@ -20,17 +20,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-	<link rel="stylesheet" type="text/css" href="css/common/table.css">
-	<script type="text/javascript" src="javascript/common/table.js"></script>
-	<link rel="StyleSheet" href="css/common/dtree.css" type="text/css" />
-	<script type="text/javascript" src="javascript/common/dtree.js"></script>
+	
+	<script type="text/javascript" src="js/common/dtree.js"></script>
+	<script type="text/javascript" src="js/common/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="js/common/jquery-ui-1.8.23.custom.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/common/jquery-ui-1.8.23.custom.css">
-	<script type="text/javascript" src="javascript/common/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript" src="javascript/common/jquery-ui-1.8.23.custom.min.js"></script>
 	<link rel="StyleSheet" href="css/file/showfile.css"  type="text/css"/>
 	 <script type="text/javascript">
 		$(function() {	
-			onloadFunction();	
+				
 			$( "#fileUploadDiv" ).dialog({
 				autoOpen: false,
 				height: 200,
@@ -73,7 +71,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
     <div style="float:left;width:20%">
-    	<input type="button" value="上传" id="uploadBtn"/>
+    	j<input type="button" value="上传" id="uploadBtn"/>
     	<input type="button" value="共享" id="setFileBtn"/>
     	<button id="addFolderBtn">添加</button>
     	<br />
@@ -96,24 +94,52 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</div>
 	
 	<div style="width:80%;height:100%;overflow:auto;">
-	
-	<iframe name="main_right" frameborder="0" width="100%" height="100%">
-		<jsp:include page="ListFiles.jsp"></jsp:include>
+	<iframe width="2%" height="2%">
+		11111111111
 	</iframe>
+	<iframe width="2%" height="2%">
+		22222222	
+	</iframe>
+	<iframe width="40%" height="40%">
+		<%@ include file="ListFiles.jsp"  %>	
+	</iframe>
+<!-- 	<iframe name="main" frameborder="0" width="100%" height="100%"> -->
+		333333333333333333
+		<input type="text" />
+		<table width="100%" >
+  	    <c:if test="${!empty files}">
+	  	    <thead>
+	  	    	<tr>
+	  	    		<th >文件 </th>
+	  	    		
+	  	    	</tr>
+	  	    
+	  	    </thead>
+  	    </c:if>
+  		
+	    <c:forEach items="${files}" var="file">
+	    	<tr>
+	    		<td>
+	    			<a href="/oa/fileAction?fatherid=${file.fatherfile.id}">${file.fileName}</a>
+	    		</td>
+	    	
+	    	</tr>
+	    	
+	    </c:forEach>
+    </table>
+<!-- 	</iframe> -->
 	</div>
 	
 	<div id="fileUploadDiv" >
-	<form action="servlet/FileUploadServlet" method="post" enctype="multipart/form-data">
+	<form action="/oa/fileUpAction!add" method="post" enctype="multipart/form-data">
 		<a href="javascript:void(0);" class="btn_addPic">
     	<span><em>+</em>添加文件</span>
-    	<input  name="file" tabindex="3" 
-		    	title="支持jpg、jpeg、gif、png格式，文件小于5M" 
-		    	size="3" name="pic" class="filePrew" type="file"/>
+    	<input  name="headImage"class="filePrew" type="file"/>
 		    	
     	</a>
-    	文件夹 ：<select name="folderId">
+    	文件夹 ：<select name="fatherid">
 						<c:forEach  items="${folders}" var="f">
-							<option value="${f.fileId}">${f.virtualPath}</option>
+							<option value="${f.fatherfile.id}">${f.fileName}</option>
 						</c:forEach>
 					
 					</select>
@@ -123,9 +149,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</div>
 	<div id="addFolderDiv">
 		<form action="servlet/AddFolderServlet">
-			父类文件夹:<select name="folderId">
+			父类文件夹:<select name="fatherid">
 						<c:forEach  items="${folders}" var="f">
-							<option value="${f.fileId}">${f.virtualPath}</option>
+							<option value="${f.fatherfile.id}">${f.fileName}</option>
 						</c:forEach>
 					
 					</select>

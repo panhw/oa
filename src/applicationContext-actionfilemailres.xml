@@ -15,7 +15,7 @@
 	</bean>
 	
 	<bean id="fileUpAction" class="com.oa.filemailres.action.FileUpAction">
-		
+		<property name="fileService" ref="fileService" />
 	</bean>
 	<bean id="fileLoadAction" class="com.oa.filemailres.action.FileLoadAction">
 		

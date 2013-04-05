@@ -9,15 +9,17 @@
     <package name="file" extends="struts-default" >
     	
     	<action name="fileAction" class="fileAction">
-    		<result name="test" type="redirectAction" >/fileAction!login</result>
-    		<result name="login" >/WEB-INF/pages/file/login.jsp</result>
+    		<result name="test">WEB-INF/pages/file/login.jsp</result>
+    		<result name="ini" >WEB-INF/pages/file/ShowFile.jsp</result>
+    		<result name="login" type="redirectAction" >/fileAction</result>
+    		<result name="files" >/WEB-INF/pages/file/ListFiles.jsp</result>
     	</action>
     	
     	<action name="fileUpAction" class="fileUpAction">
-    		<result name="success">/pages/file/fileload.jsp</result>
+    		<result name="success">WEB-INF/pages/file/fileload.jsp</result>
     		<interceptor-ref name="defaultStack" />
 			<interceptor-ref name="fileUpload"  >
-			<param name="maximumSize">5485760</param>
+			<param name="maximumSize">548576000</param>
 			<param name="allowedExtensions">.exe,.html</param>
 			</interceptor-ref>
     		

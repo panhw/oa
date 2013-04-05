@@ -10,24 +10,23 @@ import com.oa.personal.entity.Employee;
 public class FileServiceImpl implements FileService {
 
 	private FileDao fileDao;
+	
 	public List<FileVO> findAllFolders(Employee emp) {
-		// TODO Auto-generated method stub
-		return null;
+		return fileDao.findAllFolders(emp);
 	}
 
 	public List<FileVO> findAllFiles(String fatherid) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return fileDao.findAllFiles(fatherid);
 	}
 
 	public FileVO findById(String id) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return fileDao.findById(id);
 	}
 
 	public void save(FileVO newFile) {
-		// TODO Auto-generated method stub
-		
+		fileDao.save(newFile);	
 	}
 
 	public FileDao getFileDao() {
@@ -36,6 +35,11 @@ public class FileServiceImpl implements FileService {
 
 	public void setFileDao(FileDao fileDao) {
 		this.fileDao = fileDao;
+	}
+
+	public List<FileVO> findAllFiles(Employee emp) {
+		
+		return fileDao.findAllFiles(emp);
 	}
 
 	

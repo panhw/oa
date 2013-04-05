@@ -22,7 +22,7 @@
 <!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-<script type="text/javascript" src="javascript/file/setfile.js"></script>
+<script type="text/javascript" src="js/file/setfile.js"></script>
 
 </head>
 

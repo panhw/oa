@@ -1,6 +1,7 @@
 package com.oa.filemailres.entity;
 
-import java.sql.Date;
+
+import java.util.Date;
 
 import com.oa.personal.entity.Employee;
 
@@ -39,7 +40,7 @@ public class FileVO {
 	/**
 	 *  文件状态 1 正常 2 共享 3删除
 	 */
-	private int state;
+	private String state;
 	
 	/**
 	 * 文件还是文件夹0是文件夹 一是文件
@@ -85,10 +86,11 @@ public class FileVO {
 	public void setFileName(String fileName) {
 		this.fileName = fileName;
 	}
-	public int getState() {
+	
+	public String getState() {
 		return state;
 	}
-	public void setState(int state) {
+	public void setState(String state) {
 		this.state = state;
 	}
 	public String getType() {
@@ -105,7 +107,7 @@ public class FileVO {
 	}
 	@Override
 	public String toString() {
-		return "FileVO [id=" + id + ", url=" + url + ", date=" + date
+		return "FileVO [id=" + id + ", url=" + url + ", date=" + date+"fatherfile="
 				+ ", fileName=" + fileName + ", state=" + state + ", type="
 				+ type + ", undefined=" + undefined + "]";
 	}

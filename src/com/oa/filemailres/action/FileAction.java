@@ -23,29 +23,28 @@ public class FileAction extends ActionSupport implements ServletRequestAware{
 	private HttpServletRequest request;
 	private String fatherid;
 	private FileService fileService;
-	private Employee emp = new Employee();
+	private Employee emp;
 	private String folderName;
 	
 	public String execute(){
 		
 		List<FileVO> folders=fileService.findAllFolders(emp);
-		List<FileVO> files =null;
-		if(folders!=null&&folders.size()!=0){
-			files=fileService.findAllFiles(folders.get(0).getId());
-		}
+		List<FileVO> files=fileService.findAllFiles(emp);
+		System.out.println(files);
 		List<Node> nodes = TreeNodeUtils.changeFileToNodes(folders);
 		request.setAttribute("folders", folders);
 		request.setAttribute("nodes",nodes);
 		request.setAttribute("files",files);
-		return null;
+		return "ini";
 	}
 	
 	public String test(){
-		
+		System.out.println("准备登陆++++++++++++++++");
 		return "test";
 	}
 	
 	public String login(){
+		System.out.println(emp.getId()+"登陆++++++++++++++++");
 		HttpSession session = request.getSession();
 		session.setAttribute("emp", emp);
 		return "login";
@@ -72,7 +71,7 @@ public class FileAction extends ActionSupport implements ServletRequestAware{
 				newFile.setFatherfile(file);
 				newFile.setFileName(folderName);
 				newFile.setUrl(file.getUrl() + "/" + folderName + "/");
-				newFile.setState(1);
+				newFile.setState("1");
 				newFile.setType("文件");
 				newFile.setEmployee(emp);
 
@@ -87,7 +86,7 @@ public class FileAction extends ActionSupport implements ServletRequestAware{
 			newFile.setFileName(folderName);
 			newFile.setUrl("D:/" + emp.getName() + "/" + folderName + "/");
 			
-			newFile.setState(1);
+			newFile.setState("1");
 			newFile.setType("文件");
 			newFile.setEmployee(emp);
 			fileService.save(newFile);
