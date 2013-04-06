@@ -4,10 +4,26 @@
     "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
-
+	
+		
     <constant name="struts.enable.DynamicMethodInvocation" value="true" />
     <constant name="struts.devMode" value="false" />
     <constant name="struts.objectFactory" value="spring" />
+	
+	<package name="default" extends="struts-default">
+	
+        <global-results>
+            <!-- <result name="login" type="redirect">/Login.action</result> -->
+            <result name="UserException">/WEB-INF/pages/common/exception/UserException.jsp</result>
+            <result name="RuntieException">/WEB-INF/pages/common/exception/RuntimeException.jsp</result>
+            <result name="SQLException" >/WEB-INF/pages/common/exception/SQLException.jsp</result>
+        </global-results>
+
+        <global-exception-mappings>
+            <exception-mapping exception="com.oa.common.exception.UserException" result="UserException"/>
+            <exception-mapping exception="java.lang.RuntimeException" result="RuntieException"/>
+        </global-exception-mappings>
+    </package>
     
     <include file="struts-personal.xml"></include>
   	<include file="struts-information.xml"></include>
