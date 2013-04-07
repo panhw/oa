@@ -1,6 +1,7 @@
 package com.oa.common;
 
 import java.io.File;
+import java.io.PrintWriter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -72,13 +73,13 @@ public class BaseAction extends ActionSupport{
 	 * @param obj
 	 * @throws Exception
 	 */
-	protected void sendJsonMessage(HttpServletResponse response, Object obj,String encode) throws Exception{
-		/*response.setContentType("application/json; charset=" +encode);
+	protected void sendJsonMessage(HttpServletResponse response, Object obj) throws Exception{
+		/*response.setContentType("application/json; charset=UTF-8");
 		PrintWriter writer = response.getWriter();
 		writer.print(toJsonString(obj));
 		writer.close();
 		response.flushBuffer();*/
-		//TODO  需要时再引入jar
+		//TODO
 	} 
 	
 	/**

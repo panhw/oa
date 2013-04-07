@@ -6,7 +6,7 @@
 <struts>
     
     <!-- class为spring中*action。xml名字 -->
-    <package name="file" extends="struts-default" >
+    <package name="file" extends="default" >
     	
     	<action name="fileAction" class="fileAction">
     		<result name="test">WEB-INF/pages/file/login.jsp</result>

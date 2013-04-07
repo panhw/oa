@@ -6,7 +6,7 @@
 <struts>
     
     <!-- class为spring中*action。xml名字 -->
-    <package name="information" extends="struts-default" >
+    <package name="information" extends="default" >
     	
     	<action name="bfrmainInfor" class="informationAction" method="inite">
     		<result name="success">WEB-INF/pages/email/main.jsp</result>
