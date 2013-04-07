@@ -15,9 +15,9 @@ public class FileServiceImpl implements FileService {
 		return fileDao.findAllFolders(emp);
 	}
 
-	public List<FileVO> findAllFiles(String fatherid) {
+	public List<FileVO> findAllFiles(String fatherid,int page) {
 		
-		return fileDao.findAllFiles(fatherid);
+		return fileDao.findAllFiles(fatherid,page);
 	}
 
 	public FileVO findById(String id) {
@@ -37,9 +37,19 @@ public class FileServiceImpl implements FileService {
 		this.fileDao = fileDao;
 	}
 
-	public List<FileVO> findAllFiles(Employee emp) {
+	public List<FileVO> findAllFiles(Employee emp,int page) {
 		
-		return fileDao.findAllFiles(emp);
+		return fileDao.findAllFiles(emp,page);
+	}
+
+	public int numAllFiles(Employee emp) {
+		
+		return fileDao.numAllFiles(emp);
+	}
+
+	public int numFiles(String fatherid) {
+		
+		return fileDao.numFiles(fatherid);
 	}
 
 	

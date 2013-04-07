@@ -159,6 +159,7 @@ public class InformationAction extends ActionSupport implements
 			pageNO = 1;
 		}
 		all = (int) map.get("all");
+		if (all == 0) all = 1;
 		many = (Integer) map.get("many");
 		noreading = (Integer) map.get("no");
 		all = (all % 10 == 0) ? all / 10 : all / 10 + 1;
@@ -257,6 +258,7 @@ public class InformationAction extends ActionSupport implements
 			pageNO = 1;
 		}
 		all = (int) map.get("shou");
+		if (all == 0) all = 1;
 		many = (Integer) map.get("many");
 		noreading = (Integer) map.get("no");
 		all = (all % 10 == 0) ? all / 10 : all / 10 + 1;
@@ -288,6 +290,7 @@ public class InformationAction extends ActionSupport implements
 			pageNO = 1;
 		}
 		all = (int) map.get("qun");
+		if (all == 0) all = 1;
 		many = (Integer) map.get("many");
 		noreading = (Integer) map.get("no");
 		all = (all % 10 == 0) ? all / 10 : all / 10 + 1;
@@ -318,6 +321,7 @@ public class InformationAction extends ActionSupport implements
 			pageNO = 1;
 		}
 		all = (int) map.get("laji");
+		if (all == 0) all = 1;
 		many = (Integer) map.get("many");
 		noreading = (Integer) map.get("no");
 		all = (all % 10 == 0) ? all / 10 : all / 10 + 1;
@@ -348,6 +352,7 @@ public class InformationAction extends ActionSupport implements
 			pageNO = 1;
 		}
 		all = (int) map.get("caogao");
+		if (all == 0) all = 1;
 		many = (Integer) map.get("many");
 		noreading = (Integer) map.get("no");
 		all = (all % 10 == 0) ? all / 10 : all / 10 + 1;
@@ -378,6 +383,7 @@ public class InformationAction extends ActionSupport implements
 			pageNO = 1;
 		}
 		all = (int) map.get("fa");
+		if (all == 0) all = 1;
 		many = (Integer) map.get("many");
 		noreading = (Integer) map.get("no");
 		all = (all % 10 == 0) ? all / 10 : all / 10 + 1;

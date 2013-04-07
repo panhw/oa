@@ -70,8 +70,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    <div style="float:left;width:20%">
-    	j<input type="button" value="上传" id="uploadBtn"/>
+    <div style="float:left;width:100%">
+    	<input type="button" value="上传" id="uploadBtn"/>
     	<input type="button" value="共享" id="setFileBtn"/>
     	<button id="addFolderBtn">添加</button>
     	<br />
@@ -91,43 +91,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			document.write(d);
 		</script>
 		
-	</div>
-	
-	<div style="width:80%;height:100%;overflow:auto;">
-	<iframe width="2%" height="2%">
-		11111111111
-	</iframe>
-	<iframe width="2%" height="2%">
-		22222222	
-	</iframe>
-	<iframe width="40%" height="40%">
-		<%@ include file="ListFiles.jsp"  %>	
-	</iframe>
-<!-- 	<iframe name="main" frameborder="0" width="100%" height="100%"> -->
-		333333333333333333
-		<input type="text" />
-		<table width="100%" >
-  	    <c:if test="${!empty files}">
-	  	    <thead>
-	  	    	<tr>
-	  	    		<th >文件 </th>
-	  	    		
-	  	    	</tr>
-	  	    
-	  	    </thead>
-  	    </c:if>
-  		
-	    <c:forEach items="${files}" var="file">
-	    	<tr>
-	    		<td>
-	    			<a href="/oa/fileAction?fatherid=${file.fatherfile.id}">${file.fileName}</a>
-	    		</td>
-	    	
-	    	</tr>
-	    	
-	    </c:forEach>
-    </table>
-<!-- 	</iframe> -->
 	</div>
 	
 	<div id="fileUploadDiv" >

@@ -25,19 +25,38 @@ public class FileAction extends ActionSupport implements ServletRequestAware{
 	private FileService fileService;
 	private Employee emp;
 	private String folderName;
+	private String id;
+	//分页 总页数
+	private int all;
+	//分页 当前页
+	private int pageNO;
+	
 	
 	public String execute(){
 		
 		List<FileVO> folders=fileService.findAllFolders(emp);
-		List<FileVO> files=fileService.findAllFiles(emp);
-		System.out.println(files);
 		List<Node> nodes = TreeNodeUtils.changeFileToNodes(folders);
-		request.setAttribute("folders", folders);
-		request.setAttribute("nodes",nodes);
-		request.setAttribute("files",files);
+		if (folders != null )request.setAttribute("folders", folders);
+		if (nodes != null )request.setAttribute("nodes",nodes);		
 		return "ini";
 	}
 	
+	public String infile(){
+		if (pageNO < 1) {
+			pageNO = 1;
+		}
+		all = fileService.numAllFiles(emp);
+		if (all == 0) all = 1;
+		all = (all % 15 == 0) ? all / 15 : all / 15 + 1;
+		if (pageNO > all) {
+			pageNO -= 1;
+		}
+		int page = (pageNO - 1) * 15;
+		List<FileVO> files=fileService.findAllFiles(emp,page);
+		System.out.println(files);
+		request.setAttribute("files",files);
+		return "files";
+	}
 	public String test(){
 		System.out.println("准备登陆++++++++++++++++");
 		return "test";
@@ -51,7 +70,17 @@ public class FileAction extends ActionSupport implements ServletRequestAware{
 		
 	}
 	public String files(){
-		List<FileVO> files = fileService.findAllFiles(fatherid);
+		if (pageNO < 1) {
+			pageNO = 1;
+		}
+		all = fileService.numFiles(fatherid);
+		if (all == 0) all = 1;
+		all = (all % 15 == 0) ? all / 15 : all / 15 + 1;
+		if (pageNO > all) {
+			pageNO -= 1;
+		}
+		int page = (pageNO - 1) * 15;
+		List<FileVO> files = fileService.findAllFiles(fatherid,page);
 		request.setAttribute("files", files);
 		return "files";
 	}
@@ -129,6 +158,30 @@ public class FileAction extends ActionSupport implements ServletRequestAware{
 
 	public void setFileService(FileService fileService) {
 		this.fileService = fileService;
+	}
+
+	public int getAll() {
+		return all;
+	}
+
+	public void setAll(int all) {
+		this.all = all;
+	}
+
+	public int getPageNO() {
+		return pageNO;
+	}
+
+	public void setPageNO(int pageNO) {
+		this.pageNO = pageNO;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 	
 	

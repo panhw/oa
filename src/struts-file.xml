@@ -11,8 +11,8 @@
     	<action name="fileAction" class="fileAction">
     		<result name="test">WEB-INF/pages/file/login.jsp</result>
     		<result name="ini" >WEB-INF/pages/file/ShowFile.jsp</result>
-    		<result name="login" type="redirectAction" >/fileAction</result>
-    		<result name="files" >/WEB-INF/pages/file/ListFiles.jsp</result>
+    		<result name="login" >WEB-INF/pages/file/file.jsp</result>
+    		<result name="files" >WEB-INF/pages/file/mainfile.jsp</result>
     	</action>
     	
     	<action name="fileUpAction" class="fileUpAction">

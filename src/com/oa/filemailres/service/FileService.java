@@ -19,14 +19,14 @@ public interface FileService {
 	 * @param folder
 	 * @return
 	 */
-	public List<FileVO> findAllFiles(String fatherid);
+	public List<FileVO> findAllFiles(String fatherid,int page);
 	
 	/**
 	 * 查找子文件
 	 * @param folder
 	 * @return
 	 */
-	public List<FileVO> findAllFiles(Employee emp);
+	public List<FileVO> findAllFiles(Employee emp,int page);
 	
 	/**
 	 * 根据ID获取文件文件夹
@@ -40,4 +40,17 @@ public interface FileService {
 	 * @param newFile
 	 */
 	public void save(FileVO newFile);
+	
+	/**
+	 * 返回所有文件文件夹数量
+	 * @return
+	 */
+	public int numAllFiles(Employee emp);
+	
+	/**
+	 * 返回指定ID的所有文件文件夹数量
+	 * @param fatherid
+	 * @return
+	 */
+	public int numFiles(String fatherid);
 }

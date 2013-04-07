@@ -151,7 +151,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	  	}else{
 	  		var flag = 'true';
 	  		if(flag == 'true'){
-				if(confirm("您确定要将选中的数据删除吗？")){
+				if(confirm("您确定要将选中的数据标记为已读吗？")){
 //					removeDefaultHintMsg();
 		  			document.frm.action='/oa/email!reRead?empid='+empid;
 		  				
@@ -178,7 +178,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	  		alert('请至少选择一条数据进行操作！1');
 	  	}else{
 	  		
-				if(confirm("您确定要将选中的数据删除吗？")){
+				if(confirm("您确定要将选中的数据还原吗？")){
 	//				removeDefaultHintMsg();
 		  			document.frm.action='/oa/email!huan?empid='+empid;	
 		  			alert("还原");
