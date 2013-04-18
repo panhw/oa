@@ -24,5 +24,5 @@ public enum Sex {
 			return "其他";
 		}
 	};
-	public abstract String getDesc();
+	abstract String getDesc();
 }

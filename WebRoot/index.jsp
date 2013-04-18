@@ -21,8 +21,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    ${msg }
-    
+${sessionScope.userId }    
     <a href="login.jsp">进入注册页面</a>
     <form action="TestAction!getInfo" method="post">
     	<input type="hidden" name="idInfo" />

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.oa.attendanceplatform.entity.DayAttendance" table="t_attendance_day_attendance">
+		<id name="id" column="id" length="32">
+			<generator class="uuid" />
+		</id>
+		<property name="state" length="32"/>
+		<property name="date" />
+		
+	</class>
+</hibernate-mapping>

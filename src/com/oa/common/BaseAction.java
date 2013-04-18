@@ -7,6 +7,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.apache.struts2.ServletActionContext;
+
+import com.oa.personal.entity.Employee;
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 
@@ -20,51 +24,71 @@ public class BaseAction extends ActionSupport{
 
 	private static final long serialVersionUID = 8066576647777492904L;
 	
-	protected HttpServletRequest request;
+	/**
+	 * 获取当前登录的用户
+	 * @return
+	 */
+	public Employee getCurrentEmployee(){
+		return (Employee) getSession().getAttribute("employee");
+	}
 	
-	protected HttpServletResponse response;
+	/**
+	 * 获取request
+	 * @return request
+	 */
+	public HttpServletRequest getRequest(){
+		return (HttpServletRequest) ActionContext.getContext().get(ServletActionContext.HTTP_REQUEST); 
+	}
+	
+	/**
+	 * 获取reponse
+	 * @return reponse
+	 */
+	public HttpServletResponse getResponse(){
+		return (HttpServletResponse) ActionContext.getContext().get(ServletActionContext.HTTP_RESPONSE);
+	}
 	
 	/**
 	 * 获取当前会话的Session
 	 * @return 当前会话的Session
 	 */
 	public HttpSession getSession(){
-		return request.getSession();
+		return getRequest().getSession();
 	}
 	
 	/**
 	 * 获取应用路径
 	 */
 	public String getPath(){
-		return request.getContextPath();
+		return getRequest().getContextPath();
 	}
 
 	/**
 	 * 获取访问的完整基本路径
 	 */
 	public String getBasePath(){
-		return request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+getPath()+"/"; 
+		return getRequest().getScheme()+"://"+getRequest().getServerName()+":"+getRequest().getServerPort()+getPath()+"/"; 
 	}
 	
 	/**
 	 * 获取调用的Action
 	 */
 	public String getActionPath(){
-		return request.getServletPath();
+		return getRequest().getServletPath();
 	}
 	
 	/**
 	 *获取访问者地址
 	 */
 	public String getRemoteAddress(){
-		return request.getRemoteAddr();
+		return getRequest().getRemoteAddr();
 	}
 	
 	/**
 	 * 获取访问URI
 	 */
 	public String getUri(){
-		return request.getRequestURI();
+		return getRequest().getRequestURI();
 	}
 	
 	/**

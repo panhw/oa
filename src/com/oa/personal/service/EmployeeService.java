@@ -11,4 +11,12 @@ public interface EmployeeService {
 	public void register(Employee employee);
 	
 	public void getInfo(String str);
+	
+	/**
+	 * 登录
+	 * @param userName 登录名
+	 * @param password 密码
+	 * @return
+	 */
+	public boolean login(Employee employee);
 }

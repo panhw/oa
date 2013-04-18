@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.oa.attendanceplatform.entity.OnceSiginIn" table="t_attendance_once_siginin">
+		<id name="id" column="id" length="32">
+			<generator class="uuid" />
+		</id>
+		<property name="employeeId"  length="32"/>
+		<property name="siginInTime" />
+		<property name="siginType"  length="32"/>
+		
+	</class>
+</hibernate-mapping>

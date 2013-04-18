@@ -12,6 +12,17 @@
 	
 	<package name="default" extends="struts-default">
 	
+	<!-- 全局异常处理 -->
+<!-- 	<global-exceptions> 
+    <exception   
+        key="error.common" 
+        type="com.fengzhiyin.exception.ExistException"  
+        handler="com.bjnv.water.common.ExceptionHandler"  
+        path="/jsp/common/error.jsp"
+        scope="request">
+    </exception>  
+</global-exceptions> --> 
+	
         <global-results>
             <!-- <result name="login" type="redirect">/Login.action</result> -->
             <result name="UserException">/WEB-INF/pages/common/exception/UserException.jsp</result>
@@ -28,5 +39,7 @@
     <include file="struts-personal.xml"></include>
   	<include file="struts-information.xml"></include>
   	<include file="struts-file.xml"></include>
+  	<include file="struts-attendance.xml"></include>
+    <include file="struts-workflow.xml"></include>
     
 </struts>

@@ -18,8 +18,8 @@ public class Group {
 	private String name;
 	/** 成员 */
 	private List<Employee> members=new ArrayList<Employee>();;
-	/** 组内特殊人物，保存格式：<称谓,雇员>，如：<"leader",new Employee()> */
-	private Map<String,Employee> specialMens=new HashMap<String,Employee>();
+	/** 组内官员职位，保存格式：<职位,雇员> */
+	private Map<Post,Employee> posts=new HashMap<Post,Employee>();
 	
 	public int getId() {
 		return id;
@@ -39,10 +39,10 @@ public class Group {
 	public void setMembers(List<Employee> members) {
 		this.members = members;
 	}
-	public Map<String, Employee> getSpecialMens() {
-		return specialMens;
+	public Map<Post, Employee> getPosts() {
+		return posts;
 	}
-	public void setSpecialMens(Map<String, Employee> specialMens) {
-		this.specialMens = specialMens;
+	public void setPosts(Map<Post, Employee> posts) {
+		this.posts = posts;
 	}
 }

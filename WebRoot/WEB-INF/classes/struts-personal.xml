@@ -6,10 +6,11 @@
 <struts>
     
     <!-- class为spring中*action。xml名字 -->
-    <package name="ssh" extends="default">
+    <package name="personal" extends="default">
     
     
-    	<action name="TestAction" class="employeeAction">
+    	<action name="employee" class="employeeAction">
+    		<result name="index">/WEB-INF/pages/personal/main.jsp</result>
     		<result name="success">index.jsp</result>
     		<result name="error">userInfo.jsp</result>
     	</action>
