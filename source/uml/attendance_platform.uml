@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA" name="attendance_platform">
+  <packagedElement xmi:type="uml:Package" xmi:id="_mYYLcKZmEeKmadee2sCZMA" name="com">
+    <packagedElement xmi:type="uml:Package" xmi:id="_mYijgKZmEeKmadee2sCZMA" name="oa">
+      <packagedElement xmi:type="uml:Package" xmi:id="_mYjKkKZmEeKmadee2sCZMA" name="attendanceplatform">
+        <packagedElement xmi:type="uml:Package" xmi:id="_mYjxoKZmEeKmadee2sCZMA" name="entity">
+          <packagedElement xmi:type="uml:Class" xmi:id="_mYjxoaZmEeKmadee2sCZMA" name="AttendanceCount">
+            <ownedComment xmi:id="_mZC50KZmEeKmadee2sCZMA">
+              <body>/** 
+ * 个人考勤统计
+ * @author sunxs
+ */
+</body>
+            </ownedComment>
+            <ownedAttribute xmi:id="_me5DIKZmEeKmadee2sCZMA" name="employeeId" visibility="private">
+              <ownedComment xmi:id="_me5qMKZmEeKmadee2sCZMA">
+                <body>/** 
+ * 雇员id 
+ */
+</body>
+              </ownedComment>
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_me7fYKZmEeKmadee2sCZMA" name="startDate" visibility="private">
+              <ownedComment xmi:id="_me8GcKZmEeKmadee2sCZMA">
+                <body>/** 
+ * 统计开始时间 
+ */
+</body>
+              </ownedComment>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_me9UkKZmEeKmadee2sCZMA" name="endDate" visibility="private">
+              <ownedComment xmi:id="_me97oKZmEeKmadee2sCZMA">
+                <body>/** 
+ * 统计结束时间 
+ */
+</body>
+              </ownedComment>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_me_JwKZmEeKmadee2sCZMA" name="stateCount" visibility="private">
+              <ownedComment xmi:id="_me_w0KZmEeKmadee2sCZMA">
+                <body>/** 
+ * 状态统计 
+ */
+</body>
+              </ownedComment>
+            </ownedAttribute>
+            <ownedOperation xmi:id="_mfPocKZmEeKmadee2sCZMA" name="getEmployeeId" visibility="public">
+              <ownedParameter xmi:id="_mfPocaZmEeKmadee2sCZMA" name="return" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_mfRdoKZmEeKmadee2sCZMA" name="setEmployeeId" visibility="public">
+              <ownedParameter xmi:id="_mfRdoaZmEeKmadee2sCZMA" name="employeeId">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_mfSrwKZmEeKmadee2sCZMA" name="getStateCount" visibility="public">
+              <ownedParameter xmi:id="_mfSrwaZmEeKmadee2sCZMA" name="return" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_mfT54KZmEeKmadee2sCZMA" name="setStateCount" visibility="public">
+              <ownedParameter xmi:id="_mfT54aZmEeKmadee2sCZMA" name="stateCount"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_mfVIAKZmEeKmadee2sCZMA" name="getStartDate" visibility="public">
+              <ownedParameter xmi:id="_mfVIAaZmEeKmadee2sCZMA" name="return" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_mfWWIKZmEeKmadee2sCZMA" name="setStartDate" visibility="public">
+              <ownedParameter xmi:id="_mfWWIaZmEeKmadee2sCZMA" name="startDate"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_mfXkQKZmEeKmadee2sCZMA" name="getEndDate" visibility="public">
+              <ownedParameter xmi:id="_mfXkQaZmEeKmadee2sCZMA" name="return" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_mfYyYKZmEeKmadee2sCZMA" name="setEndDate" visibility="public">
+              <ownedParameter xmi:id="_mfYyYaZmEeKmadee2sCZMA" name="endDate"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_mZKOkKZmEeKmadee2sCZMA" name="DayAttendance">
+            <ownedComment xmi:id="_mZLcsKZmEeKmadee2sCZMA">
+              <body>/** 
+ * 日考勤
+ * @author sunxs
+ */
+</body>
+            </ownedComment>
+            <ownedAttribute xmi:id="_mfankKZmEeKmadee2sCZMA" name="id" visibility="private">
+              <ownedComment xmi:id="_mfbOoKZmEeKmadee2sCZMA">
+                <body>/** 
+ * 逻辑id 
+ */
+</body>
+              </ownedComment>
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_mfb1sKZmEeKmadee2sCZMA" name="state" visibility="private">
+              <ownedComment xmi:id="_mfccwKZmEeKmadee2sCZMA">
+                <body>/** 
+ * 考勤状态（见AttendanceConts） 
+ */
+</body>
+              </ownedComment>
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_mfdD0KZmEeKmadee2sCZMA" name="date" visibility="private">
+              <ownedComment xmi:id="_mfdq4KZmEeKmadee2sCZMA">
+                <body>/** 
+ * 考勤日期 
+ */
+</body>
+              </ownedComment>
+            </ownedAttribute>
+            <ownedOperation xmi:id="_mfdq4aZmEeKmadee2sCZMA" name="getId" visibility="public">
+              <ownedParameter xmi:id="_mfdq4qZmEeKmadee2sCZMA" name="return" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_mfeR8KZmEeKmadee2sCZMA" name="setId" visibility="public">
+              <ownedParameter xmi:id="_mfeR8aZmEeKmadee2sCZMA" name="id">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_mfe5AKZmEeKmadee2sCZMA" name="getState" visibility="public">
+              <ownedParameter xmi:id="_mffgEKZmEeKmadee2sCZMA" name="return" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_mfgHIKZmEeKmadee2sCZMA" name="setState" visibility="public">
+              <ownedParameter xmi:id="_mfgHIaZmEeKmadee2sCZMA" name="state">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_mfguMKZmEeKmadee2sCZMA" name="getDate" visibility="public">
+              <ownedParameter xmi:id="_mfguMaZmEeKmadee2sCZMA" name="return" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_mfh8UKZmEeKmadee2sCZMA" name="setDate" visibility="public">
+              <ownedParameter xmi:id="_mfh8UaZmEeKmadee2sCZMA" name="date"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_mZLcsaZmEeKmadee2sCZMA" name="OnceSiginIn">
+            <ownedComment xmi:id="_mZMDwKZmEeKmadee2sCZMA">
+              <body>/** 
+ * 一次签到
+ * @author sunxs
+ */
+</body>
+            </ownedComment>
+            <ownedAttribute xmi:id="_mfjKcKZmEeKmadee2sCZMA" name="id" visibility="private">
+              <ownedComment xmi:id="_mfjxgKZmEeKmadee2sCZMA">
+                <body>/** 
+ * 逻辑id 
+ */
+</body>
+              </ownedComment>
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_mfk_oKZmEeKmadee2sCZMA" name="employeeId" visibility="private">
+              <ownedComment xmi:id="_mflmsKZmEeKmadee2sCZMA">
+                <body>/** 
+ * 用户id 
+ */
+</body>
+              </ownedComment>
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_mfmNwKZmEeKmadee2sCZMA" name="siginInTime" visibility="private">
+              <ownedComment xmi:id="_mfm00KZmEeKmadee2sCZMA">
+                <body>/** 
+ * 签到时间 
+ */
+</body>
+              </ownedComment>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_mfnb4KZmEeKmadee2sCZMA" name="siginType" visibility="private">
+              <ownedComment xmi:id="_mfoC8KZmEeKmadee2sCZMA">
+                <body>/** 
+ * 签到类型（常量，见AttendanceConsts） 
+ */
+</body>
+              </ownedComment>
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedOperation xmi:id="_mfoC8aZmEeKmadee2sCZMA" name="getId" visibility="public">
+              <ownedParameter xmi:id="_mfoC8qZmEeKmadee2sCZMA" name="return" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_mfpREKZmEeKmadee2sCZMA" name="setId" visibility="public">
+              <ownedParameter xmi:id="_mfpREaZmEeKmadee2sCZMA" name="id">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_mfqfMKZmEeKmadee2sCZMA" name="getEmployeeId" visibility="public">
+              <ownedParameter xmi:id="_mfqfMaZmEeKmadee2sCZMA" name="return" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_mfrtUKZmEeKmadee2sCZMA" name="setEmployeeId" visibility="public">
+              <ownedParameter xmi:id="_mfrtUaZmEeKmadee2sCZMA" name="employeeId">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_mfs7cKZmEeKmadee2sCZMA" name="getSiginInTime" visibility="public">
+              <ownedParameter xmi:id="_mfs7caZmEeKmadee2sCZMA" name="return" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_mfuJkKZmEeKmadee2sCZMA" name="setSiginInTime" visibility="public">
+              <ownedParameter xmi:id="_mfuJkaZmEeKmadee2sCZMA" name="siginInTime"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_mfuwoKZmEeKmadee2sCZMA" name="getSiginType" visibility="public">
+              <ownedParameter xmi:id="_mfuwoaZmEeKmadee2sCZMA" name="return" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_mfv-wKZmEeKmadee2sCZMA" name="setSiginType" visibility="public">
+              <ownedParameter xmi:id="_mfv-waZmEeKmadee2sCZMA" name="siginType">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_KOLfMqZpEeKmadee2sCZMA" name="AttendanceConts">
+          <ownedComment xmi:id="_KOMtUKZpEeKmadee2sCZMA">
+            <body>/** 
+ * 考勤常量
+ * @author sunxs
+ */
+</body>
+          </ownedComment>
+          <ownedAttribute xmi:id="_KRFCMKZpEeKmadee2sCZMA" name="START_WORK_HOUR" visibility="public" isStatic="true">
+            <ownedComment xmi:id="_KRGQUKZpEeKmadee2sCZMA">
+              <body>/** 
+ * 上班时间（小时，24小时制） 
+ */
+</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_KRFCMaZpEeKmadee2sCZMA" value="8"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_KRG3YKZpEeKmadee2sCZMA" name="START_WORK_MINUTE" visibility="public" isStatic="true">
+            <ownedComment xmi:id="_KRHecKZpEeKmadee2sCZMA">
+              <body>/** 
+ * 上班时间（分钟） 
+ */
+</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_KRG3YaZpEeKmadee2sCZMA" value="30"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_KRIskKZpEeKmadee2sCZMA" name="END_WORK_HOUR" visibility="public" isStatic="true">
+            <ownedComment xmi:id="_KRJToKZpEeKmadee2sCZMA">
+              <body>/** 
+ * 下班时间（小时，24小时制） 
+ */
+</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_KRIskaZpEeKmadee2sCZMA" value="18"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_KRKhwKZpEeKmadee2sCZMA" name="END_WORK_MINUTE" visibility="public" isStatic="true">
+            <ownedComment xmi:id="_KRLI0KZpEeKmadee2sCZMA">
+              <body>/** 
+ * 下班时间（分钟） 
+ */
+</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_KRKhwaZpEeKmadee2sCZMA"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_KROMIKZpEeKmadee2sCZMA" name="SIGN_TYPE_IN" visibility="public" isStatic="true" isReadOnly="true">
+            <ownedComment xmi:id="_KROzMKZpEeKmadee2sCZMA">
+              <body>/** 
+ * 签到类型：上班签到 
+ */
+</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_KROMIaZpEeKmadee2sCZMA" value="sign_in"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_KRQBUKZpEeKmadee2sCZMA" name="SIGN_TYPE_OUT" visibility="public" isStatic="true" isReadOnly="true">
+            <ownedComment xmi:id="_KRQoYKZpEeKmadee2sCZMA">
+              <body>/** 
+ * 签到类型：下班签到 
+ */
+</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_KRQBUaZpEeKmadee2sCZMA" value="sign_out"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_KRR2gKZpEeKmadee2sCZMA" name="STATE_OK" visibility="private" isStatic="true" isReadOnly="true">
+            <ownedComment xmi:id="_KRSdkKZpEeKmadee2sCZMA">
+              <body>/** 
+ * 正常 
+ */
+</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_KRR2gaZpEeKmadee2sCZMA" value="ok"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_KRTEoKZpEeKmadee2sCZMA" name="STATE_LATE" visibility="private" isStatic="true" isReadOnly="true">
+            <ownedComment xmi:id="_KRTrsKZpEeKmadee2sCZMA">
+              <body>/** 
+ * 迟到 
+ */
+</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_KRTEoaZpEeKmadee2sCZMA" value="late"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_KRUSwKZpEeKmadee2sCZMA" name="STATE_LEAVW_EARLY" visibility="private" isStatic="true" isReadOnly="true">
+            <ownedComment xmi:id="_KRU50KZpEeKmadee2sCZMA">
+              <body>/** 
+ * 早退 
+ */
+</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_KRUSwaZpEeKmadee2sCZMA" value="leave_early"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_KRWH8KZpEeKmadee2sCZMA" name="STATE_ABSENCE" visibility="private" isStatic="true" isReadOnly="true">
+            <ownedComment xmi:id="_KRWvAKZpEeKmadee2sCZMA">
+              <body>/** 
+ * 缺勤 
+ */
+</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_KRWH8aZpEeKmadee2sCZMA" value="absence"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_KRXWEKZpEeKmadee2sCZMA" name="STATE_LEAVE" visibility="private" isStatic="true" isReadOnly="true">
+            <ownedComment xmi:id="_KRX9IKZpEeKmadee2sCZMA">
+              <body>/** 
+ * 请假 
+ */
+</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_KRXWEaZpEeKmadee2sCZMA" value="leave"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_KRYkMKZpEeKmadee2sCZMA" name="STATE_BUSINESS_TRIP" visibility="private" isStatic="true" isReadOnly="true">
+            <ownedComment xmi:id="_KRZLQKZpEeKmadee2sCZMA">
+              <body>/** 
+ * 出差 
+ */
+</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_KRYkMaZpEeKmadee2sCZMA" value="business_trip"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_KRaZYKZpEeKmadee2sCZMA" name="STATE_OTHER_NORMAL" visibility="private" isStatic="true" isReadOnly="true">
+            <ownedComment xmi:id="_KRbAcKZpEeKmadee2sCZMA">
+              <body>/** 
+ * 其他正常情况 
+ */
+</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_KRaZYaZpEeKmadee2sCZMA" value="other_normal"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_KRhHEKZpEeKmadee2sCZMA" name="STATE_OTHER_UNUSUAL" visibility="private" isStatic="true" isReadOnly="true">
+            <ownedComment xmi:id="_KRiVMKZpEeKmadee2sCZMA">
+              <body>/** 
+ * 其他异常情况 
+ */
+</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_KRhHEaZpEeKmadee2sCZMA" value="other-unusal"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_zUYgI6ZsEeKmadee2sCZMA" name="action">
+          <packagedElement xmi:type="uml:Class" xmi:id="_zUYgJKZsEeKmadee2sCZMA" name="DayAttendanceAction">
+            <generalization xmi:id="_zW4agaZsEeKmadee2sCZMA" general="_zW4agKZsEeKmadee2sCZMA"/>
+            <ownedAttribute xmi:id="_zW5BkKZsEeKmadee2sCZMA" name="dayAttendanceService" visibility="private" type="_zUaVUaZsEeKmadee2sCZMA" association="_zar8cKZsEeKmadee2sCZMA"/>
+            <ownedOperation xmi:id="_zXnaUaZsEeKmadee2sCZMA" name="testResponseBody" visibility="public">
+              <ownedParameter xmi:id="_zXnaUqZsEeKmadee2sCZMA" name="return" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_zW4agKZsEeKmadee2sCZMA" name="BaseAction"/>
+          <packagedElement xmi:type="uml:Association" xmi:id="_zar8cKZsEeKmadee2sCZMA" memberEnd="_zW5BkKZsEeKmadee2sCZMA _zar8caZsEeKmadee2sCZMA">
+            <ownedEnd xmi:id="_zar8caZsEeKmadee2sCZMA" name="DayAttendanceAction" type="_zUYgJKZsEeKmadee2sCZMA" association="_zar8cKZsEeKmadee2sCZMA"/>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_zUZuQKZsEeKmadee2sCZMA" name="dao">
+          <packagedElement xmi:type="uml:Class" xmi:id="_zUZuQaZsEeKmadee2sCZMA" name="DayAttendanceDAO">
+            <generalization xmi:id="_zXoocaZsEeKmadee2sCZMA" general="_zXoocKZsEeKmadee2sCZMA"/>
+            <ownedOperation xmi:id="_zXp2kKZsEeKmadee2sCZMA" name="getPageDatas" visibility="public">
+              <ownedParameter xmi:id="_zXp2kaZsEeKmadee2sCZMA" name="startIndex">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_zXp2kqZsEeKmadee2sCZMA" name="maxResult">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_zXp2k6ZsEeKmadee2sCZMA" name="whereHQL">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_zXp2lKZsEeKmadee2sCZMA" name="params" type="_zXpPgKZsEeKmadee2sCZMA">
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zXp2laZsEeKmadee2sCZMA" value="*"/>
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zXp2lqZsEeKmadee2sCZMA"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_zXp2l6ZsEeKmadee2sCZMA" name="orderBy">
+                <type xmi:type="uml:DataType" href="../../attendance_platform.uml#_zWyT4qZsEeKmadee2sCZMA"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_zXp2mKZsEeKmadee2sCZMA" name="return" type="_zWyT56ZsEeKmadee2sCZMA" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_zXoocKZsEeKmadee2sCZMA" name="BaseDAO&lt;DayAttendance>"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_zUaVUKZsEeKmadee2sCZMA" name="service">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_zUaVUaZsEeKmadee2sCZMA" name="DayAttendanceService">
+            <ownedOperation xmi:id="_zXrrwKZsEeKmadee2sCZMA" name="addDayAttendance" visibility="public">
+              <ownedParameter xmi:id="_zXrrwaZsEeKmadee2sCZMA" name="dayAtt">
+                <type xmi:type="uml:DataType" href="../../attendance_platform.uml#_zWyT5KZsEeKmadee2sCZMA"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_zXrrwqZsEeKmadee2sCZMA" name="return" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_zXsS0KZsEeKmadee2sCZMA" name="updateDayAttendance" visibility="public">
+              <ownedParameter xmi:id="_zXsS0aZsEeKmadee2sCZMA" name="dayAtt">
+                <type xmi:type="uml:DataType" href="../../attendance_platform.uml#_zWyT5KZsEeKmadee2sCZMA"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_zXs54KZsEeKmadee2sCZMA" name="countAttendance" visibility="public">
+              <ownedParameter xmi:id="_zXs54aZsEeKmadee2sCZMA" name="startDate">
+                <type xmi:type="uml:DataType" href="../../attendance_platform.uml#_zWziAKZsEeKmadee2sCZMA"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_zXs54qZsEeKmadee2sCZMA" name="endDAte">
+                <type xmi:type="uml:DataType" href="../../attendance_platform.uml#_zWziAKZsEeKmadee2sCZMA"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_zXs546ZsEeKmadee2sCZMA" name="return" direction="return">
+                <type xmi:type="uml:DataType" href="../../attendance_platform.uml#_zWziAaZsEeKmadee2sCZMA"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_zUbjcKZsEeKmadee2sCZMA" name="impl">
+            <packagedElement xmi:type="uml:Class" xmi:id="_zUcKgKZsEeKmadee2sCZMA" name="DayAttendanceServiceImpl" clientDependency="_zYFUYKZsEeKmadee2sCZMA">
+              <ownedAttribute xmi:id="_zYGigKZsEeKmadee2sCZMA" name="dayAttendanceDAO" visibility="private" type="_zUZuQaZsEeKmadee2sCZMA" association="_zasjgKZsEeKmadee2sCZMA"/>
+              <interfaceRealization xmi:id="_zYFUYKZsEeKmadee2sCZMA" name="DayAttendanceService" supplier="_zUaVUaZsEeKmadee2sCZMA" client="_zUcKgKZsEeKmadee2sCZMA" contract="_zUaVUaZsEeKmadee2sCZMA"/>
+              <ownedOperation xmi:id="_zYHJkKZsEeKmadee2sCZMA" name="addDayAttendance" visibility="public">
+                <ownedParameter xmi:id="_zYHJkaZsEeKmadee2sCZMA" name="dayAtt">
+                  <type xmi:type="uml:DataType" href="../../attendance_platform.uml#_zWyT5KZsEeKmadee2sCZMA"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_zYHJkqZsEeKmadee2sCZMA" name="return" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_zYIXsKZsEeKmadee2sCZMA" name="updateDayAttendance" visibility="public">
+                <ownedParameter xmi:id="_zYIXsaZsEeKmadee2sCZMA" name="dayAtt">
+                  <type xmi:type="uml:DataType" href="../../attendance_platform.uml#_zWyT5KZsEeKmadee2sCZMA"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_zYJl0KZsEeKmadee2sCZMA" name="countAttendance" visibility="public">
+                <ownedParameter xmi:id="_zYJl0aZsEeKmadee2sCZMA" name="startDate">
+                  <type xmi:type="uml:DataType" href="../../attendance_platform.uml#_zWziAKZsEeKmadee2sCZMA"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_zYJl0qZsEeKmadee2sCZMA" name="endDate">
+                  <type xmi:type="uml:DataType" href="../../attendance_platform.uml#_zWziAKZsEeKmadee2sCZMA"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_zYJl06ZsEeKmadee2sCZMA" name="return" direction="return">
+                  <type xmi:type="uml:DataType" href="../../attendance_platform.uml#_zWziAaZsEeKmadee2sCZMA"/>
+                </ownedParameter>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_zasjgKZsEeKmadee2sCZMA" memberEnd="_zYGigKZsEeKmadee2sCZMA _zasjgaZsEeKmadee2sCZMA">
+              <ownedEnd xmi:id="_zasjgaZsEeKmadee2sCZMA" name="DayAttendanceServiceImpl" type="_zUcKgKZsEeKmadee2sCZMA" association="_zasjgKZsEeKmadee2sCZMA"/>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_zWxs0KZsEeKmadee2sCZMA" name="common">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_zWxs0aZsEeKmadee2sCZMA" name="BaseAction"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_zWyT5aZsEeKmadee2sCZMA" name="BaseDAO"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_zWyT5qZsEeKmadee2sCZMA" name="utils">
+          <packagedElement xmi:type="uml:DataType" xmi:id="_zWyT56ZsEeKmadee2sCZMA" name="PageDatas"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_mbqI8KZmEeKmadee2sCZMA" name="java">
+    <packagedElement xmi:type="uml:Package" xmi:id="_mbqI8aZmEeKmadee2sCZMA" name="util"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_zWxFwKZsEeKmadee2sCZMA" name="javax">
+    <packagedElement xmi:type="uml:Package" xmi:id="_zWxFwaZsEeKmadee2sCZMA" name="annotation">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_zWxFwqZsEeKmadee2sCZMA" name="Resource"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_zWxFw6ZsEeKmadee2sCZMA" name="org">
+    <packagedElement xmi:type="uml:Package" xmi:id="_zWxFxKZsEeKmadee2sCZMA" name="springframework">
+      <packagedElement xmi:type="uml:Package" xmi:id="_zWxFxaZsEeKmadee2sCZMA" name="stereotype">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_zWxFxqZsEeKmadee2sCZMA" name="Component"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_zWxFx6ZsEeKmadee2sCZMA" name="web">
+        <packagedElement xmi:type="uml:Package" xmi:id="_zWxFyKZsEeKmadee2sCZMA" name="bind">
+          <packagedElement xmi:type="uml:Package" xmi:id="_zWxFyaZsEeKmadee2sCZMA" name="annotation">
+            <packagedElement xmi:type="uml:DataType" xmi:id="_zWxFyqZsEeKmadee2sCZMA" name="ResponseBody"/>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_zWziAqZsEeKmadee2sCZMA" name="beans">
+        <packagedElement xmi:type="uml:Package" xmi:id="_zW0JEKZsEeKmadee2sCZMA" name="factory">
+          <packagedElement xmi:type="uml:Package" xmi:id="_zW0JEaZsEeKmadee2sCZMA" name="annotation">
+            <packagedElement xmi:type="uml:DataType" xmi:id="_zW0JEqZsEeKmadee2sCZMA" name="Autowired"/>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_zXpPgKZsEeKmadee2sCZMA" name="Object"/>
+</uml:Model>

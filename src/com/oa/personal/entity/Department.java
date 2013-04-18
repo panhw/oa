@@ -1,7 +1,9 @@
 package com.oa.personal.entity;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 员工所属部门实体
@@ -15,6 +17,8 @@ public class Department {
 	private String name;
 	/** 部门中的员工 */
 	private List<Employee> employees = new ArrayList<Employee>();
+	/** 职位,Map<职位,雇员> */
+	private Map<Post,Employee> posts=new HashMap<Post,Employee>();
 
 	public Department(){}
 	
@@ -48,6 +52,14 @@ public class Department {
 
 	public void setEmployees(List<Employee> employees) {
 		this.employees = employees;
+	}
+
+	public Map<Post, Employee> getPosts() {
+		return posts;
+	}
+
+	public void setPosts(Map<Post, Employee> posts) {
+		this.posts = posts;
 	}
 
 }

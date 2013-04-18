@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagrams:Diagrams xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.topcased.org/DI/1.0" xmlns:diagrams="http://www.topcased.org/Diagrams/1.0" xmi:id="_iaTMUaZmEeKmadee2sCZMA" activeDiagram="_iadkYKZmEeKmadee2sCZMA">
+  <model href="attendance_platform.uml#_qb8akM37EdqwVrslYOdUDA"/>
+  <diagrams xmi:id="_iadkYKZmEeKmadee2sCZMA" position="0,0" size="100,100" name="attendance_platform" viewport="29,29">
+    <property xmi:id="_ixpVUKZmEeKmadee2sCZMA" key="pageFormatName" value=""/>
+    <property xmi:id="_ixpVUaZmEeKmadee2sCZMA" key="diagramWidth" value="1478"/>
+    <property xmi:id="_ixpVUqZmEeKmadee2sCZMA" key="diagramHeight" value="1263"/>
+    <property xmi:id="_ixpVU6ZmEeKmadee2sCZMA" key="pageMarginName" value="A4"/>
+    <property xmi:id="_ixpVVKZmEeKmadee2sCZMA" key="diagramTopMargin" value="20"/>
+    <property xmi:id="_ixpVVaZmEeKmadee2sCZMA" key="diagramBottomMargin" value="20"/>
+    <property xmi:id="_ixpVVqZmEeKmadee2sCZMA" key="diagramLeftMargin" value="20"/>
+    <property xmi:id="_ixp8YKZmEeKmadee2sCZMA" key="diagramRightMargin" value="20"/>
+    <property xmi:id="_ixp8YaZmEeKmadee2sCZMA" key="orientation" value="portrait"/>
+    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_iaeygKZmEeKmadee2sCZMA" presentation="org.topcased.modeler.uml.classdiagram">
+      <element href="attendance_platform.uml#_qb8akM37EdqwVrslYOdUDA"/>
+    </semanticModel>
+  </diagrams>
+</diagrams:Diagrams>
