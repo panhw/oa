@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@include file="/WEB-INF/pages/include/plugins.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,7 +9,7 @@
 </head>
 <body>
 	
-	<ul>
+	<ul class="nav nav-tabs nav-stacked">
 		<li><a href="/oa/email!add" target="mainframe">写消息</a></li>
 		<li><a href="/oa/email!shou?state=3" target="mainframe">收件箱（${noreading }）</a></li>
 		<li><a href="/oa/email!qun?state=2" target="mainframe">群消息（${many }）</a></li>

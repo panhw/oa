@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@include file="/WEB-INF/pages/include/plugins.jsp" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -35,7 +36,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   		<input type="button" value="清空" onclick="qingBtn()"/>
   	</c:if>
   	
-  			<table id="data" width="100%" align="center">
+  			<table id="data" width="100%" align="center" class="table table-condensed">
 				<tr>
 					<th width="5%"><input type="checkbox" id="IDS" name="IDS" onclick="selectAll(this,'ID')"/></th>
 					<th width="20%">发件人</th>
