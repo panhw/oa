@@ -23,15 +23,32 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    <form name="frm" method="post" action=""> 
-		主题：<input type="text" id="topical"  value=${information.topical } /> <br />
-		收件人：<input type="text" id="tid" readonly="readonly" value=${information.empSend.id } />
-			<input type="hidden" name="hid" id="hid" value=${information.id } ><br />		
-		<textarea rows="20" cols="50" name="information.info">
+    <form name="frm" method="post" action="">
+    <table>
+    	<tr>
+    		<td>主 题：</td>
+    		<td><input type="text" id="topical"  value=${information.topical } /></td>
+    	</tr>
+    	<tr>
+    		<td>收件人：</td>
+    		<td>
+    			<input type="text" id="tid" readonly="readonly" value=${information.empSend.id } />
+    			<input type="hidden" name="hid" id="hid" value=${information.id } >
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>正 文:</td>
+    		<td><textarea rows="20" cols="50" name="information.info">
 		
-${information.info }</textarea><br />
-		<input type="button" value="发送" onclick="deleteBtn()"/>
-		<input type="button" value="返回" onclick="delBtn()"/>
+${information.info }</textarea></td>
+    	</tr>
+    	<tr>
+    		<td  colspan="2">
+    			<input type="button" value="发送" onclick="deleteBtn()"/>
+				<input type="button" value="返回" onclick="delBtn()"/>
+			</td>	
+    	</tr>
+    </table> 
 	</form>
   </body>
   <script type="text/javascript">

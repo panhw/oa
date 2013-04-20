@@ -21,7 +21,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body> 
-    g共（${many+noreading }）未读邮件 
+  <div style="height: 6%"></div>
+    共（${many+noreading }）未读邮件 
      
     <form name="frm" id="frm" action="" method="post">
     <c:if test="${state != 6 }">
@@ -36,13 +37,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   		<input type="button" value="清空" onclick="qingBtn()"/>
   	</c:if>
   	
-  			<table id="data" width="100%" align="center" class="table table-condensed">
+  			<table id="data" width="100%" align="center" class="table table-hover">
 				<tr>
-					<th width="5%"><input type="checkbox" id="IDS" name="IDS" onclick="selectAll(this,'ID')"/></th>
-					<th width="20%">发件人</th>
-					<th width="40%">主题</th>
-					<th width="10%">状态</th>
-					<th width="25%">日期</th>
+					<td width="5%"><div align="center">
+							<input type="checkbox" id="IDS" name="IDS" onclick="selectAll(this,'ID')"/>
+						</div>
+					</td>
+					<td width="20%"><div align="center">发件人</div></td>
+					<td width="40%"><div align="center">主题</div></td>
+					<td width="10%"><div align="center">状态</div></td>
+					<td width="25%"><div align="center">日期</div></td>
 		
 				</tr>
 				
@@ -58,7 +62,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						</div>
 					</td>
 					<td><div align="center">${infor.empSend.id }</div></td>
-					<td><a href="/oa/email!read?empid=${infor.id }">${infor.topical }</a></td>
+					<td><div align="center"><a href="/oa/email!read?empid=${infor.id }">${infor.topical }</a></div></td>
 					<c:if test="${infor.status eq '1' }">
 						<td><div align="center">未读</div></td>
 					</c:if>
@@ -71,9 +75,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				
 				<tr>
 					<td colspan="5">
-						<a href="/oa/email!allNoRead?pageNO=${pageNO-1 }">上一页</a>
-						当前第${pageNO }页共${all }页
-						<a href="/oa/email!allNoRead?pageNO=${pageNO+1 }">下一页</a>
+						<div align="center">
+							<a href="/oa/email!allNoRead?pageNO=${pageNO-1 }">上一页</a>
+							当前第${pageNO }页共${all }页
+							<a href="/oa/email!allNoRead?pageNO=${pageNO+1 }">下一页</a>
+						</div>
 					</td>
 				</tr>
 			</table>

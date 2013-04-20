@@ -20,28 +20,41 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
 <body>
 	<form name="frm" method="post" action=""> 
-		主题：<input type="text" name="information.topical" id="topical" value="${information.topical }" /> <br />
-		收件人：<input type="text" id="tid" readonly="readonly" />
-			<input type="hidden" name="empid" id="hid" >
-			<input type="button" value="清空" id="qinkong" />
-			<input type="checkbox" name="qun" id="qun" />群发
-			<select name="depart" id="depart" onchange="getEmps()">
-				<option value="">--选择部门--</option>
-				<option value="测试部">--测试部--</option>
-			</select>
-			<select id="emps">
-				<option value="">--选择员工--</option>
-				<option value="abc">张三</option>
-				<option value="123">李四</option>
-				<option value="234">王麻子</option>
-			</select>
-		<br />		
-		<textarea rows="20" cols="50" name="information.info">
-		
-${information.info }
-		</textarea><br />
-		<input type="button" value="立即发送" onclick="sender()" />
-		<input type="button" value="保存至草稿箱" onclick="save()"/>
+		<table>
+		<tr>
+			<td>主 题：</td>
+			<td><input type="text" name="information.topical" id="topical" value="${information.topical }" /></td>
+		</tr>
+		<tr>
+			<td>收件人：</td>
+			<td>
+				<input type="text" id="tid" readonly="readonly" />
+				<input type="hidden" name="empid" id="hid" >
+				<input type="button" value="清空" id="qinkong" />
+				<input type="checkbox" name="qun" id="qun" />群发
+				<select name="depart" id="depart" onchange="getEmps()">
+					<option value="">--选择部门--</option>
+					<option value="测试部">--测试部--</option>
+				</select>
+				<select id="emps">
+					<option value="">--选择员工--</option>
+					<option value="abc">张三</option>
+					<option value="123">李四</option>
+					<option value="234">王麻子</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>正 文：</td>
+			<td><textarea rows="20" cols="50" name="information.info">${information.info }</textarea><br /></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<input type="button" value="立即发送" onclick="sender()" />
+				<input type="button" value="保存至草稿箱" onclick="save()"/></td>
+			<td></td>
+		</tr>		
+		</table>
 	</form>
 </body>
 

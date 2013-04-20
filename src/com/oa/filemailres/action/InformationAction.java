@@ -240,7 +240,7 @@ public class InformationAction extends ActionSupport implements
 		System.out.println("回复");
 		information = inforService.read(empid);
 		information.setTopical("回复：" + information.getTopical());
-		information.setInfo("--------------原始邮件---------------\n"
+		information.setInfo("--------------原始邮件---------------"
 				+ information.getInfo());
 		return "reply";
 	}
