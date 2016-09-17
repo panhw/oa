@@ -7,6 +7,7 @@
 *.csproj merge=union
 *.vbproj merge=union
 *.fsproj merge=union
+//测试账号,对你的不便,深感抱歉;
 *.dbproj merge=union
 
 # Standard to msysgit
